@@ -1,7 +1,7 @@
 /// --- APP SCSS --- ///
 
 // -- GLOBAL STYLING -- //
-@use "./styles/partials/typography.scss" as *;
+@use "./styles/partials/_global" as *;
 
 // -- COMPONENT STYLING -- //
 //is this needed???? makes more sense for it to be attached to the components only

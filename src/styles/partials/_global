@@ -1,0 +1,8 @@
+/// --- GLOBAL SCSS --- ///
+
+@use "./typography.scss" as *;
+@use "./mixins" as *;
+@use "./variables" as *;
+@use "./colors" as *;
+
+// bg color $white
