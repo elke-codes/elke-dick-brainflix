@@ -14,3 +14,21 @@
     @content;
   }
 }
+
+// PADDING //
+
+@mixin padding-headlines {
+  padding-top: 24px;
+  padding-bottom: 16px;
+  @include tablet {
+    padding-top: 36px;
+    padding-bottom: 24px;
+  }
+}
+
+@mixin padding-between-components {
+  padding-top: 16px;
+  @include tablet {
+    padding-top: 24px;
+  }
+}

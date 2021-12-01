@@ -1,4 +1,5 @@
 /// --- TYPOGRAPHY SCSS --- ///
+@use "./mixins" as *;
 
 // -- FONTS -- //
 @font-face {
@@ -21,23 +22,25 @@
 
 // PAGE HEADER
 
-@mixin page-header-txt {
+@mixin page-header {
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
+  @include padding-headlines;
+
   @include tablet {
     font-size: 33px;
     line-height: 44px;
   }
 }
 
-@mixin section-header-txt {
+@mixin section-header {
   font-size: 12px;
   line-height: 20px;
   font-weight: 700;
 }
 
-@mixin subheader-txt {
+@mixin subheader {
   font-size: 13px;
   line-height: 18px;
   font-weight: 700;
@@ -47,7 +50,7 @@
   }
 }
 
-@mixin body-copy-txt {
+@mixin body-copy {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
@@ -57,7 +60,7 @@
   }
 }
 
-@mixin labels-buttons-copy-txt {
+@mixin labels-buttons-copy {
   font-size: 12px;
   line-height: 20px;
   font-weight: bold;
