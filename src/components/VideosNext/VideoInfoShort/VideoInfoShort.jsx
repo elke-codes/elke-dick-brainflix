@@ -1,15 +1,17 @@
 /// --- VideoInfoShort --- ///
 
 import React from 'react';
-// import image from "../../../data/data/videos.json"
-import jsonData from "../../../data/data/videos.json";
+import jsonData from "../../../data/videos.json";
 
 // -- IMPORT SCSS -- //
 import "./VideoInfoShort.scss";
 
+
+// -- GLOBAL VARIABLES -- //
+
 // https://www.stechies.com/unexpected-token-o-json-position-1/
 const convertData = JSON.stringify(jsonData) ;
-console.log(convertData);
+// console.log(convertData);
 const videoData = JSON.parse(convertData);
 
 

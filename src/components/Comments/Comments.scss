@@ -1,0 +1,12 @@
+/// -- COMMENTS SCSS ---///
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.Comments {
+  @include padding-sections;
+
+  &__title {
+    @include subheader;
+  }
+}
