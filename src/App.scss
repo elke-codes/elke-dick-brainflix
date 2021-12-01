@@ -4,8 +4,3 @@
 @use "./styles/partials/_global" as *;
 
 // -- COMPONENT STYLING -- //
-//is this needed???? makes more sense for it to be attached to the components only
-@use "./components/Header/Header.scss";
-@use "./components/Hero/Hero.scss";
-@use "./components/Comments/Comments.scss";
-@use "./components/VideosNext/VideosNext.scss";

@@ -5,7 +5,7 @@
   font-family: "AvenirNext LT Pro";
   src: url("../../assets/fonts/AvenirNextLTPro-Regular.woff2") format("woff2"),
     url("../../assets/fonts/AvenirNextLTPro-Regular.woff") format("woff");
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 
@@ -13,8 +13,52 @@
   font-family: "AvenirNext LT Pro";
   src: url("../../assets/fonts/AvenirNextLTPro-Bold.woff2") format("woff2"),
     url("../../assets/fonts/AvenirNextLTPro-Bold.woff") format("woff");
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
-//
+// -- TYPOGRAPHY STYLING -- //
+
+// PAGE HEADER
+
+@mixin page-header-txt {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  @include tablet {
+    font-size: 33px;
+    line-height: 44px;
+  }
+}
+
+@mixin section-header-txt {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+@mixin subheader-txt {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 700;
+  @include tablet {
+    font-size: 14px;
+    line-heigt: 22px;
+  }
+}
+
+@mixin body-copy-txt {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@mixin labels-buttons-copy-txt {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: bold;
+}
