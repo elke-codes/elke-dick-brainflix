@@ -1,21 +1,24 @@
-import './App.scss';
-import Header from "./components/Header/Header";
-import "./components/Header/Header.scss"
-import Hero from "./components/Hero/Hero";
-import "./components/Hero/Hero.scss";
-import Comments from "./components/Comments/Comments";
-import "./components/Comments/Comments.scss";
-import VideosNext from "./components/VideosNext/VideosNext";
-import "./components/VideosNext/VideosNext.scss";
+/// --- APP.JS --- ///
 
+// -- IMPORT SCSS -- //
+import "./App.scss";
+import "./styles/partials/_typography.scss";
+
+// -- IMPORT COMPONENTS -- //
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Comments from "./components/Comments/Comments";
+import VideosNext from "./components/VideosNext/VideosNext";
+
+// -- COMPONENT DECLARATION -- //
 function App() {
   return (
-  <>
-    <Header />
-    <Hero />
-    <Comments />
-    <VideosNext />
-  </>
+    <>
+      <Header />
+      <Hero />
+      <Comments />
+      <VideosNext />
+    </>
   );
 }
 
