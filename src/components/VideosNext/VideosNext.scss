@@ -1,1 +1,13 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
 
+.VideosNext {
+  @include padding-between-components;
+  @include padding-sections;
+
+  &__section-title {
+    @include padding-between-components;
+    @include section-header;
+  }
+}

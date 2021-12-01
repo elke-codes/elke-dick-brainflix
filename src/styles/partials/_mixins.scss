@@ -1,6 +1,7 @@
 /// --- MIXINS SCSS --- ///
 
 @use "./variables" as *;
+@use "./colors" as *;
 
 // MEDIA QUERIES //
 @mixin tablet {
@@ -31,4 +32,21 @@
   @include tablet {
     padding-top: 24px;
   }
+}
+
+@mixin margin-between-components {
+  margin-top: 16px;
+  @include tablet {
+    margin-top: 24px;
+  }
+}
+
+@mixin image {
+  border-radius: 4px;
+  background-color: $mercury;
+  // width: 100%;
+}
+
+@mixin padding-sections {
+  padding: 0 1rem;
 }
