@@ -11,7 +11,7 @@ import "./VideoInfoShort.scss";
 const convertData = JSON.stringify(jsonData) ;
 console.log(convertData);
 const videoData = JSON.parse(convertData);
-console.log(videoData);
+
 
 const VideoInfoShort = () => {
  
