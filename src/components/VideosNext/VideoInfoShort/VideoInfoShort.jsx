@@ -17,7 +17,18 @@ const VideoInfoShort = () => {
  
   return (
     
-    <div> {videoData.map(video =><p>{video.title}</p>)}
+    <div> {videoData.map(video =>(
+    <>
+        <p className="VideoInfoShort__title">{video.title}</p>
+        <p className="VideoInfoShort__channel">{video.channel}</p>
+        <img 
+        className="VideoInfoShort__image"
+        src={video.image} 
+        />
+    </>
+        )
+        
+        )}
     </div>
  
   );
