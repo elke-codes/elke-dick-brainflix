@@ -1,5 +1,6 @@
 /// --- TYPOGRAPHY SCSS --- ///
 @use "./mixins" as *;
+@use "./colors" as *;
 
 // -- FONTS -- //
 @font-face {
@@ -64,4 +65,6 @@
   font-size: 12px;
   line-height: 20px;
   font-weight: bold;
+  text-transform: uppercase;
+  color: $white;
 }

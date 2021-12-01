@@ -1,0 +1,25 @@
+/// --- BUTTON SCSS --- ///
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
+.Button {
+  height: 40px;
+  width: 100%;
+  padding: 32px;
+  background-color: $action;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  @include labels-buttons-copy;
+  @include tablet {
+    min-width: 150px;
+    width: 250px;
+  }
+
+  &:hover {
+    background-color: $action-hover;
+  }
+}

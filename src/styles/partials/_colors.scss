@@ -2,16 +2,19 @@
 
 // -- PRIMARY COLORS -- //
 
-$brainflix-black: #323232;
+$primary-text: #323232;
+// brainflix-black
 // primary text color
 
-$brainflix-blue: #0095ff;
+$action: #0095ff;
+// brainflix-blue
 // primary CTA color.
 // Active form field outline color.
 // aka button default
 // played video fill
 
-$silver: #afafaf;
+$secondary-text: #afafaf;
+// silver
 // secondary text color
 // text label color
 // video buffer
@@ -29,7 +32,8 @@ $brainflix-darkblack: #000000;
 // Video player components @50%opacity
 // scrubber buffer fill
 
-$brainflix-darkblue: #0065ad;
+$action-hover: #0065ad;
+// brainflix-darkblue
 // CTA hover state color.
 // aka button hover
 

@@ -1,4 +1,4 @@
-/// --- VIDEOSNEXT.JS --- ///
+/// --- VIDEOSNEXT.JSX --- ///
 import React from "react";
 
 // -- IMPORT SCSS -- //
