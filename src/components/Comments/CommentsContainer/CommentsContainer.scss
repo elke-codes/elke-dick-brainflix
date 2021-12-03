@@ -1,8 +1,23 @@
 /// --- COMMENTS__TEXT SCSS
-@use "../../../styles/partials/global" as *;
+@use "../../../styles/partials/colors" as *;
 @use "../../../styles/partials/mixins" as *;
 @use "../../../styles/partials/typography" as *;
 
 .CommentsContainer {
   @include padding-between-components;
+}
+
+.Comment {
+  &__name {
+    @include padding-between-components;
+    @include subheader;
+  }
+
+  &__comment {
+    @include padding-between-components;
+  }
+
+  &__date {
+    @include padding-between-components;
+  }
 }

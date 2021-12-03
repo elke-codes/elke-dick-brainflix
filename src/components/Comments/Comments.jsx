@@ -1,5 +1,5 @@
 /// --- COMMENTS.JS --- ///
-
+import CommentForm from "./CommentForm/CommentForm";
 import React from "react";
 import CommentsContainer from "./CommentsContainer/CommentsContainer";
 // -- IMPORT SCSS -- //
@@ -10,7 +10,7 @@ const Comments = () => {
   return (
     <section className="Comments">
         <h3 className="Comments__title"> (number of) comments</h3>
-        {/*form add comments*/}
+        <CommentForm/>
         <CommentsContainer />
     </section>
   )

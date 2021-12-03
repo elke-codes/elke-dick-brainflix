@@ -5,8 +5,10 @@ import Avatar from '../../Avatar/Avatar';
 import jsonDetail from "../../../data/video-details.json";
 
 
+
 // -- IMPORT SCSS -- //
 import "./CommentsContainer.scss";
+;
 
 // -- GLOBAL VARIABLES -- //
 
@@ -20,35 +22,35 @@ const detailVideoData = JSON.parse(convertDetailData);
 // });
 
 
-const CommentsContainer = () => {
+const CommentsContainer = (props) => {
   return (
     <div className="CommentsContainer">
-      <div className="CommentsContainer__comments">
-
-      <div>
+  
         {detailVideoData.map(video =>(
           <article className="CommentsContainer__comment" key={video.id}>
 
 {/* need function to get current video id and comments related to that video only */}
-            <div>
+
             {video.comments.map(comment => (
-            <div>
-            <p>{comment.name}</p>
-            <p>{comment.comment}</p>
-            <p>{comment.timestamp}</p>
+              <>
+            <div className="Comment__top">
+            <p className="Comment__name">{comment.name}</p>
+            <p className="Comment__comment">{comment.comment}</p>
             </div>
+
+            <p className="Comment__date">{comment.timestamp}</p>
+            </>
             ))}
          
-            </div>
+
            
           </article>
              
         ))}
           
          
-      </div>
+     
 
-      </div>
       <Avatar />
     </div>
   );

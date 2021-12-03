@@ -1,4 +1,4 @@
-@use "../../styles/partials/global" as *;
+@use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
@@ -34,6 +34,7 @@
 
   &__date {
     @include padding-between-components;
+    color: $secondary-text;
   }
 
   &__views {
@@ -42,6 +43,7 @@
     background-repeat: no-repeat;
     position: left;
     padding-left: 2rem;
+    color: $secondary-text;
   }
 
   &__likes {
@@ -52,6 +54,7 @@
     background-repeat: no-repeat;
     position: left;
     padding-left: 2rem;
+    color: $secondary-text;
   }
 
   &__description {
