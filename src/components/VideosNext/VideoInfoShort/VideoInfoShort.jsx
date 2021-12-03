@@ -1,7 +1,9 @@
 /// --- VideoInfoShort --- ///
 
 import React from 'react';
-import jsonData from "../../../data/videos.json";
+// import React, { Component } from 'react';
+// import jsonData from "../../../data/videos.json";
+// import jsonDataDetail from "../../../data/video-details.json";
 
 // -- IMPORT SCSS -- //
 import "./VideoInfoShort.scss";
@@ -9,18 +11,28 @@ import "./VideoInfoShort.scss";
 
 // -- GLOBAL VARIABLES -- //
 
-// https://www.stechies.com/unexpected-token-o-json-position-1/
-const convertData = JSON.stringify(jsonData) ;
-// console.log(convertData);
-const videoData = JSON.parse(convertData);
+// // https://www.stechies.com/unexpected-token-o-json-position-1/
+// const convertData = JSON.stringify(jsonData) ;
+// // console.log(convertData);
+// const videos = JSON.parse(convertData);
 
+// console.log("typeof videoData: ", typeof videoData);
 
-const VideoInfoShort = () => {
- 
-  return (
-    
-    <div> {videoData.map(video =>(
-        <article className="VideoInfoShort" id={video.id} >
+// console.log(videoData);
+
+const handleClick=(id) =>{
+  console.log("clicked", id);
+}
+
+const VideoInfoShort = (props) => {
+
+  const { id, image, title, channel } = props.filteredVideos;
+
+// console.log(props)
+    return (
+      <div> {props.filteredVideos.map(video =>(
+        <article className="VideoInfoShort" id={video.id} key={video.id} onClick={() => handleClick(video.id)} >
+         {/* { console.log(video.id)} */}
             <img 
             className="VideoInfoShort__image"
             src={video.image} 
@@ -34,7 +46,19 @@ const VideoInfoShort = () => {
         
         )}
     </div>
-  );
-}
+    );
+};
+
+// export default VideoInfoShort;
+// class VideoInfoShort extends Component {
+
+
+
+//   render() {
+//   console.log(this.state.videos);
+  
+ 
+//   }
+// }
 
 export default VideoInfoShort;

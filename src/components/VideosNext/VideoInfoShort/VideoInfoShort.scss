@@ -2,7 +2,7 @@
 @use "../../../styles/partials/global" as *;
 @use "../../../styles/partials/mixins" as *;
 @use "../../../styles/partials/typography" as *;
-// @use "../../../styles/partials/colors" as *;
+@use "../../../styles/partials/colors" as *;
 
 .VideoInfoShort {
   @include padding-between-components;
@@ -30,5 +30,10 @@
     @include image;
     width: 120px;
     height: 60px;
+  }
+
+  &:hover {
+    background-color: rgba($color: $brainflix-darkblack, $alpha: 0.1);
+    cursor: pointer;
   }
 }
