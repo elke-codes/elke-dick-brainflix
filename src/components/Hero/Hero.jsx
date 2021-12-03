@@ -15,7 +15,7 @@ import "./Hero.scss";
 
 const Hero = (props) => {
   console.log(props);
-  const { image, title} = props.selectedVideo;
+  const { image, title} = props.firstSelectedVideo;
   return (
 
     <section className="Hero">
@@ -25,7 +25,7 @@ const Hero = (props) => {
         <article className="Hero__video-details">
           <h2 className="Hero__title">{title}</h2>
           <DeviderLine />
-         <VideoDetails selectedVideo={props.selectedVideo} videosDetails={props.videosDetails}/>
+         <VideoDetails firstSelectedVideo={props.firstSelectedVideo} videosDetails={props.videosDetails}/>
         </article>
     </section>
   

@@ -26,11 +26,11 @@ const handleClick=(id) =>{
 
 const VideoInfoShort = (props) => {
 
-  const { id, image, title, channel } = props.filteredVideos;
+  const { id, image, title, channel } = props.allButCurrentVideo;
 
 // console.log(props)
     return (
-      <div> {props.filteredVideos.map(video =>(
+      <div> {props.allButCurrentVideo.map(video =>(
         <article className="VideoInfoShort" id={video.id} key={video.id} onClick={() => handleClick(video.id)} >
          {/* { console.log(video.id)} */}
             <img 

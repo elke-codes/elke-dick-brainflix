@@ -27,20 +27,36 @@ class App extends Component {
 
   state = {
     videosDetail : jsonDataDetail,
-    selectedVideo : jsonDataDetail[0]
+    firstSelectedVideo : jsonDataDetail[0],
+    videosData: jsonData
   }
 
+  // handleVideoClick = (id) => {
+    //     this.setState({
+    //       firstSelectedVideo : jsonDataDetail.find((video) => video.id === id)
+    //     })
+    //   }
 
   render() {
-    const currentVideo = this.state.videosDetail.filter((video) => video.id === this.state.selectedVideo.id);
-  
+    // console.log("data from app",this.state.videosData)
+    const currentVideo = this.state.videosDetail.filter((video) => video.id === this.state.firstSelectedVideo.id);
+
+    // console.log("currentvideo?:" ,currentVideo[0].id)
+    const allButCurrentVideo = this.state.videosData.filter((video) => video.id !== currentVideo[0].id);
+    // console.log("allButCurrentVideo",allButCurrentVideo);
     return (
       <>
-      <Header />
-      <Hero videosDetail={this.state.videosDetail} selectedVideo={this.state.selectedVideo}/>
-      <Comments videosDetail={this.state.videosDetail} selectedVideo={this.state.selectedVideo} currentVideo={currentVideo} />
-      <VideosNext />
-    </>
+        <Header />
+        <Hero videosDetail={this.state.videosDetail} firstSelectedVideo={this.state.firstSelectedVideo}/>
+        <Comments videosDetail={this.state.videosDetail} firstSelectedVideo={this.state.firstSelectedVideo} currentVideo={currentVideo} />
+        <VideosNext 
+            videosData={this.state.videosData} 
+            videosDetail={this.state.videosDetail} 
+            firstSelectedVideo={this.state.firstSelectedVideo} 
+            currentVideo={currentVideo} 
+            allButCurrentVideo={allButCurrentVideo}
+        />
+      </>
     );
   }
 }

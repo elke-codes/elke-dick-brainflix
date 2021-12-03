@@ -5,7 +5,7 @@ import DeviderLine from '../../DeviderLine/DeviderLine';
 
 const VideoDetails = (props) => {
 
-  const {channel, timestamp, views, likes, description } = props.selectedVideo;
+  const {channel, timestamp, views, likes, description } = props.firstSelectedVideo;
 
   return (
     <>
