@@ -40,7 +40,6 @@ class App extends Component {
       <Hero videosDetail={this.state.videosDetail} selectedVideo={this.state.selectedVideo}/>
       <Comments videosDetail={this.state.videosDetail} selectedVideo={this.state.selectedVideo} currentVideo={currentVideo} />
       <VideosNext />
-      <Button />
     </>
     );
   }

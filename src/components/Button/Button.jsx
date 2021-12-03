@@ -9,7 +9,7 @@ import React from 'react';
 const Button = () => {
   return (
    <button className="Button">
-     button text from prop
+     button text to come from prop
    </button>
   );
 };

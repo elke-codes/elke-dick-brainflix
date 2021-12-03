@@ -1,36 +1,32 @@
 import React from 'react';
 import Avatar from '../../Avatar/Avatar';
+import Button from '../../Button/Button';
 import "./CommentForm.scss";
 
 
 const CommentForm = () => {
   return (
+
+ 
+
     <form action="" className="Form">
-      <Avatar />
-      {/* <div class="Avatar avatar-form">
-              <div class="avatar__placeholder">
-                <img
-                  src="./assets/images/Mohan-muruge.jpg"
-                  alt="close-up from a man with an excellent moustache, looking sternly to the left, on a purple background"
-                  class="avatar__image"
-                />
-              </div>
-            </div> */}
-            {/* <div class="Form__field-container"> */}
-
+            
+              <Avatar />
               <div className="Form__input">
-
-                <label className="Form__input-title"htmlfor="comment">JOIN THE CONVERSATION</label>
-
-                <input
-                  type="text"
-                  name="comment"
-                  placeholder="Add a new comment"
-                  id="comment"
-                  className="Form__input-field"/>
+                  <label className="Form__input-title" htmlFor="comment">JOIN THE CONVERSATION</label>
+                  <input
+                    type="text"
+                    name="comment"
+                    placeholder="Add a new comment"
+                    id="comment"
+                    className="Form__input-field"/>
+                  <Button/>
               </div>
-          {/* </div> */}
+            
     </form>
+ 
+
+
   );
 };
 
