@@ -6,12 +6,13 @@ import CommentsContainer from "./CommentsContainer/CommentsContainer";
 import "./Comments.scss";
 
 // -- COMPONENT DECLARATION -- //
-const Comments = () => {
+const Comments = (props) => {
+  console.log("props from comments:",props.currentVideo);
   return (
     <section className="Comments">
         <h3 className="Comments__title"> (number of) comments</h3>
-        <CommentForm/>
-        <CommentsContainer />
+        <CommentForm />
+        <CommentsContainer videosDetail={props.videosDetail} selectedVideo={props.selectedVideo} currentVideo={props.currentVideo}/>
     </section>
   )
 };

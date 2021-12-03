@@ -20,7 +20,7 @@ const CommentForm = () => {
 
               <div className="Form__input">
 
-                <label className="Form__input-title"for="comment">JOIN THE CONVERSATION</label>
+                <label className="Form__input-title"htmlfor="comment">JOIN THE CONVERSATION</label>
 
                 <input
                   type="text"

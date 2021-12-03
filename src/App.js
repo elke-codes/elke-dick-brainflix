@@ -32,11 +32,13 @@ class App extends Component {
 
 
   render() {
+    const currentVideo = this.state.videosDetail.filter((video) => video.id === this.state.selectedVideo.id);
+  
     return (
       <>
       <Header />
       <Hero videosDetail={this.state.videosDetail} selectedVideo={this.state.selectedVideo}/>
-      <Comments />
+      <Comments videosDetail={this.state.videosDetail} selectedVideo={this.state.selectedVideo} currentVideo={currentVideo} />
       <VideosNext />
       <Button />
     </>
