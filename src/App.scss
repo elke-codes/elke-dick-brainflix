@@ -1,6 +1,36 @@
 /// --- APP SCSS --- ///
 
-// -- GLOBAL STYLING -- //
-@use "./styles/partials/_global" as *;
+/// --- GLOBAL SCSS --- ///
 
-// -- COMPONENT STYLING -- //
+// @use "../typography.scss" as *;
+@use "./styles/partials/typography.scss" as *;
+@use "./styles/partials/mixins" as *;
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/colors" as *;
+
+// bg color $white
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "AvenirNext LT Pro", Arial, sans-serif;
+  color: $primary-text;
+  background-color: $white;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}

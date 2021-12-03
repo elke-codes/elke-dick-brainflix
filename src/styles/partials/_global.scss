@@ -1,33 +1,33 @@
-/// --- GLOBAL SCSS --- ///
+// /// --- GLOBAL SCSS --- ///
 
-@use "./typography.scss" as *;
-@use "./mixins" as *;
-@use "./variables" as *;
-@use "./colors" as *;
+// @use "./typography.scss" as *;
+// @use "./mixins" as *;
+// @use "./variables" as *;
+// @use "./colors" as *;
 
-// bg color $white
+// // bg color $white
 
-*,
-::before,
-::after {
-  box-sizing: border-box;
-}
+// *,
+// ::before,
+// ::after {
+//   box-sizing: border-box;
+// }
 
-body {
-  margin: 0;
-  font-family: "AvenirNext LT Pro", Arial, sans-serif;
-  color: $primary-text;
-  background-color: $white;
-}
+// body {
+//   margin: 0;
+//   font-family: "AvenirNext LT Pro", Arial, sans-serif;
+//   color: $primary-text;
+//   background-color: $white;
+// }
 
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
+// h1,
+// h2,
+// h3,
+// p {
+//   margin: 0;
+//   padding: 0;
+// }
 
-a {
-  text-decoration: none;
-}
+// a {
+//   text-decoration: none;
+// }

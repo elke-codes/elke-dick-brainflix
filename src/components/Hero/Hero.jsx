@@ -7,6 +7,7 @@ import jsonDataDetail from "../../data/video-details.json";
 // -- IMPORT COMPONENTS -- //
 // import Date from "../Date/Date";
 import VideoDetails from './VideoDetails/VideoDetails';
+import DeviderLine from "./../DeviderLine/DeviderLine";
 // -- IMPORT SCSS -- //
 import "./Hero.scss";
 
@@ -29,7 +30,7 @@ class Hero extends Component {
 
             <article className="Hero__video-details">
               <h2 className="Hero__title">{this.state.selectedVideo.title}</h2>
-              {/* devider line*/}
+              <DeviderLine />
              <VideoDetails selectedVideo={this.state.selectedVideo}/>
             </article>
         </section>

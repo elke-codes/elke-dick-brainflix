@@ -1,7 +1,60 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+
 .Hero {
-  width: 100%;
+  @include padding-between-components;
 
   &__video {
     height: 400px;
+    width: 100%;
+    padding: 0 -2rem;
+  }
+
+  &__video-details {
+    @include padding-sections;
+  }
+
+  &__section-title {
+    @include padding-between-components;
+    @include section-header;
+  }
+
+  &__info-container {
+    display: flex;
+    @include padding-between-components;
+  }
+
+  &__info-left {
+    margin-right: 6rem;
+  }
+  &__channel {
+    @include subheader;
+  }
+
+  &__date {
+    @include padding-between-components;
+  }
+
+  &__views {
+    display: flex;
+    background-image: url("../../assets/images/icons/views.svg");
+    background-repeat: no-repeat;
+    position: left;
+    padding-left: 2rem;
+  }
+
+  &__likes {
+    @include margin-between-components;
+    display: flex;
+
+    background-image: url("../../assets/images/icons/likes.svg");
+    background-repeat: no-repeat;
+    position: left;
+    padding-left: 2rem;
+  }
+
+  &__description {
+    @include padding-between-components;
   }
 }
