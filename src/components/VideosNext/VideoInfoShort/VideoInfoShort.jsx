@@ -10,19 +10,11 @@ import "./VideoInfoShort.scss";
 
 
 // -- GLOBAL VARIABLES -- //
-
-// // https://www.stechies.com/unexpected-token-o-json-position-1/
-// const convertData = JSON.stringify(jsonData) ;
-// // console.log(convertData);
-// const videos = JSON.parse(convertData);
-
-// console.log("typeof videoData: ", typeof videoData);
-
-// console.log(videoData);
-
 const handleClick=(id) =>{
   console.log("clicked", id);
 }
+
+// -- COMPONENT DECLARATION -- // 
 
 const VideoInfoShort = (props) => {
 
