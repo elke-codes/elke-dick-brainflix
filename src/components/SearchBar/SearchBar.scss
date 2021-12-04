@@ -1,0 +1,15 @@
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.search {
+  background-image: url(../../assets/images/icons/search.svg);
+  background-repeat: no-repeat;
+  background-position: 0.5rem;
+  padding: 1rem 0;
+  padding-left: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  border: 1px solid $secondary-text;
+  width: 90%;
+  margin-right: 1rem;
+}

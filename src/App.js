@@ -41,6 +41,8 @@ class App extends Component {
     // console.log("data from app",this.state.videosData)
     // TODO
     //this doesn t seem needed anymore. can just make first selected video back into selected video and update de state of it. 
+    //use find? returns single value
+    // see codealong findindex etc
     const currentVideo = this.state.videosDetail.filter((video) => video.id === this.state.firstSelectedVideo.id);
 
     // console.log("currentvideo?:" ,currentVideo[0].id)

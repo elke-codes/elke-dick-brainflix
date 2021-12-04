@@ -3,7 +3,7 @@
 @use "../../styles/partials/typography" as *;
 
 .Hero {
-  @include padding-between-components;
+  // @include padding-between-components;
 
   &__video {
     width: 100%;
