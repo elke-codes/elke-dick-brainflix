@@ -1,6 +1,7 @@
 /// --- HERO.JS --- ///
 // -- IMPORT MODULES -- //
 import React from 'react';
+import Video from '../Video/Video';
 
 // -- IMPORT COMPONENTS -- //
 // import Date from "../Date/Date";
@@ -20,12 +21,12 @@ const Hero = (props) => {
 
     <section className="Hero">
         {/* <Date /> */}
-        <video className="Hero__video" src="" poster={image}></video>
+        <Video selectedVideo={props.selectedVideo}/>
 
         <article className="Hero__video-details">
           <h2 className="Hero__title">{title}</h2>
-          <DeviderLine />
-         <VideoDetails selectedVideo={props.selectedVideo} videosDetails={props.videosDetails}/>
+        <DeviderLine />
+        <VideoDetails selectedVideo={props.selectedVideo} />
         </article>
     </section>
   

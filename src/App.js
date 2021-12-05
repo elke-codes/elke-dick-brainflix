@@ -36,7 +36,7 @@ class App extends Component {
           selectedVideo : jsonDataDetail.find((video) => video.id === id)
         });
 
-        // not in the requirements but so much nicer ux
+        // not in the requirements but so much nicer ux than having to scroll to the top yourself
         // https://www.codegrepper.com/code-examples/javascript/onclick+scroll+to+top+javascript
         window.scroll({
           top: 0, 
