@@ -15,8 +15,9 @@ import "./Hero.scss";
 
 
 const Hero = (props) => {
-  console.log(props);
+
   const { image, title} = props.selectedVideo;
+
   return (
 
     <section className="Hero">

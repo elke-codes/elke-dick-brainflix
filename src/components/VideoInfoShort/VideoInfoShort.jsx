@@ -1,15 +1,9 @@
 /// --- VideoInfoShort --- ///
 
 import React from 'react';
-// import React, { Component } from 'react';
-// import jsonData from "../../../data/videos.json";
-// import jsonDataDetail from "../../../data/video-details.json";
 
 // -- IMPORT SCSS -- //
 import "./VideoInfoShort.scss";
-
-
-// -- GLOBAL VARIABLES -- //
 
 
 // -- COMPONENT DECLARATION -- // 
@@ -30,7 +24,6 @@ const VideoInfoShort = (props) => {
         onClick={() => handleClick(video.id)} 
       
         >
-         { console.log(video.id)}
             <img 
             className="video-info-short__image"
             src={video.image} 
@@ -47,17 +40,5 @@ const VideoInfoShort = (props) => {
     </div>
     );
 };
-
-// export default VideoInfoShort;
-// class VideoInfoShort extends Component {
-
-
-
-//   render() {
-//   console.log(this.state.videos);
-  
- 
-//   }
-// }
 
 export default VideoInfoShort;

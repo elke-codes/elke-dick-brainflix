@@ -52,11 +52,8 @@ class App extends Component {
  
 
     let buttonText = "";
-    // let date = selectedVideo.
 
     const allButselectedVideo = this.state.videosData.filter((video) => video.id !== this.state.selectedVideo.id);
-
-    console.log("allButselectedVideo",allButselectedVideo);
 
     return (
       <>
