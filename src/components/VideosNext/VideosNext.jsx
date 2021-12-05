@@ -11,9 +11,9 @@ import "./VideosNext.scss";
 
 
 const VideosNext = (props) => {
-  console.log("props from videosnext", props);
-  console.log("videosnex allButselectedVideo", props.allButselectedVideo)
-  console.log("videosnex handlevideoselect", props.handleVideoSelect)
+  // console.log("props from videosnext", props);
+  // console.log("videosnex allButselectedVideo", props.allButselectedVideo)
+  // console.log("videosnex handlevideoselect", props.handleVideoSelect)
   return (
     <aside className="VideosNext">
     <h3 className="VideosNext__section-title">NEXT VIDEOS</h3>

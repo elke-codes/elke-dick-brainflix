@@ -15,6 +15,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Comments from "./components/Comments/Comments"
 import VideosNext from "./components/VideosNext/VideosNext";
+import Date from "./components/Date/Date";
 
 
 
@@ -52,6 +53,7 @@ class App extends Component {
  
 
     let buttonText = "";
+    // let date = selectedVideo.
 
     const allButselectedVideo = this.state.videosData.filter((video) => video.id !== this.state.selectedVideo.id);
 
@@ -59,6 +61,7 @@ class App extends Component {
 
     return (
       <>
+      <Date selectedVideo={this.state.selectedVideo}/>
         <Header 
         buttonText={buttonText} />
         <Hero 
@@ -68,7 +71,6 @@ class App extends Component {
         videosDetail={this.state.videosDetail} 
         selectedVideo={this.state.selectedVideo} 
         buttonText={this.state.buttonText}/>
-        
         <VideosNext 
             videosData={this.state.videosData} 
             videosDetail={this.state.videosDetail} 

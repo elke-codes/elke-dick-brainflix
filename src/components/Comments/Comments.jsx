@@ -8,7 +8,9 @@ import "./Comments.scss";
 // -- COMPONENT DECLARATION -- //
 const Comments = (props) => {
   console.log("props from comments:", props.selectedVideo);
+  
   const amountOfComments = props.selectedVideo.comments.length;
+
   return (
     <section className="Comments">
         <h3 className="Comments__title">{amountOfComments} comments</h3>

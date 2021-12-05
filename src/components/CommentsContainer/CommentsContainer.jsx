@@ -14,6 +14,9 @@ import "./CommentsContainer.scss";
 
 
 const CommentsContainer = (props) => {
+
+  console.log("props fromcommentscontainer:", props.selectedVideo.comments)
+
 // selectedVideo[0]!! woof...
 // console.log("props from commentscontainer:", props.selectedVideo[0].comments);
 // console.log("curcur",selectedVideo.selectedVideo);
@@ -34,7 +37,7 @@ const CommentsContainer = (props) => {
                 <div className="Comment__top" >
                     <Avatar />
                     <p className="Comment__name">{comment.name}</p>
-                    <p className="Comment__date">{comment.timestamp}</p>
+                    <p className="Comment__date">{(comment.timestamp)}</p>
                 </div>
                 <p className="Comment__comment">{comment.comment}</p>
                

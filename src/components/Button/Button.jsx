@@ -1,20 +1,19 @@
 /// --- BUTTON JSX ---///
-
+import React from 'react';
 // -- IMPORT SCSS -- //
-
 import "./Button.scss";
 
-import React from 'react';
+
+const handleButtonClick = (e) =>{
+  e.preventDefault();
+}
 
 
-
-const Button = (props) => {
-
-
+const Button = () => {
   return (
-   <button className="Button">
-     {props.buttonText}
-  </button>
+   <button className="Button"  onClick={handleButtonClick}>
+     UPLOAD
+   </button>
   );
 };
 
