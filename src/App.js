@@ -15,7 +15,7 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Comments from "./components/Comments/Comments"
 import VideosNext from "./components/VideosNext/VideosNext";
-import Date from "./components/Date/Date";
+
 
 
 
@@ -46,7 +46,6 @@ class App extends Component {
           behavior: 'smooth' 
          });
       };
-
   
 
   render() {
@@ -61,16 +60,18 @@ class App extends Component {
 
     return (
       <>
-      <Date selectedVideo={this.state.selectedVideo}/>
         <Header 
-        buttonText={buttonText} />
+        buttonText={buttonText} 
+        />
         <Hero 
         videosDetail={this.state.videosDetail} 
-        selectedVideo={this.state.selectedVideo} />
+        selectedVideo={this.state.selectedVideo} 
+        />
         <Comments 
         videosDetail={this.state.videosDetail} 
         selectedVideo={this.state.selectedVideo} 
-        buttonText={this.state.buttonText}/>
+        buttonText={this.state.buttonText}
+        />
         <VideosNext 
             videosData={this.state.videosData} 
             videosDetail={this.state.videosDetail} 

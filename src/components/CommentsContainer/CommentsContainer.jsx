@@ -3,6 +3,7 @@
 import React from 'react';
 import Avatar from "../Avatar/Avatar";
 // import jsonDetail from "../../../data/video-details.json";
+import { timeAgo } from '../../functions/timeAgo';
 
 
 
@@ -37,7 +38,7 @@ const CommentsContainer = (props) => {
                 <div className="Comment__top" >
                     <Avatar />
                     <p className="Comment__name">{comment.name}</p>
-                    <p className="Comment__date">{(comment.timestamp)}</p>
+                    <p className="Comment__date">{timeAgo(comment.timestamp)}</p>
                 </div>
                 <p className="Comment__comment">{comment.comment}</p>
                

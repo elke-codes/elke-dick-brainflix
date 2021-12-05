@@ -3,6 +3,9 @@ import React from 'react';
 //-- IMPORT COMPONENTS -- //
 import DeviderLine from '../DeviderLine/DeviderLine';
 
+// -- IMPORT HELPER FUNCTION --//
+import { timeAgo } from '../../functions/timeAgo';
+
 const VideoDetails = (props) => {
 
   const {channel, timestamp, views, likes, description } = props.selectedVideo;
@@ -12,7 +15,7 @@ const VideoDetails = (props) => {
       <div className="Hero__info-container">
         <div className="Hero__info-left">
           <p className="Hero__channel">{channel}</p>
-          <p className="Hero__date">{timestamp}</p>
+          <p className="Hero__date">{timeAgo(timestamp)}</p>
         </div>
           <div className="Hero__info-right">
             
