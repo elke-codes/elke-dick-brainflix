@@ -20,7 +20,7 @@ const Header = () => {
          <Avatar />
       </div>
 
-      <Button />
+      <Button buttonText="Upload"/>
   </header>
   )
 };

@@ -13,7 +13,9 @@ const Comments = (props) => {
     <section className="Comments">
         <h3 className="Comments__title">{amountOfComments} comments</h3>
         <CommentForm />
-        <CommentsContainer videosDetail={props.videosDetail} selectedVideo={props.selectedVideo}/>
+        <CommentsContainer 
+        videosDetail={props.videosDetail} 
+        selectedVideo={props.selectedVideo}/>
     </section>
   )
 };

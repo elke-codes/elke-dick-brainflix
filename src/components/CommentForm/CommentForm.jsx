@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 import "./CommentForm.scss";
 
 
-const CommentForm = () => {
+const CommentForm = (props) => {
   return (
 
     <form action="" className="Form">
@@ -19,7 +19,7 @@ const CommentForm = () => {
                     placeholder="Add a new comment"
                     id="comment"
                     className="Form__input-field"/>
-                  <Button/>
+                  <Button buttonText="COMMENT"/>
               </div>
             
     </form>

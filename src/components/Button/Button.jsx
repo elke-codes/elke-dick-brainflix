@@ -6,11 +6,15 @@ import "./Button.scss";
 
 import React from 'react';
 
-const Button = () => {
+
+
+const Button = (props) => {
+
+
   return (
    <button className="Button">
-     UPLOAD
-   </button>
+     {props.buttonText}
+  </button>
   );
 };
 

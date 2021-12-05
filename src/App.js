@@ -28,7 +28,8 @@ class App extends Component {
   state = {
     videosDetail : jsonDataDetail,
     videosData: jsonData,
-    selectedVideo : jsonDataDetail[0]
+    selectedVideo : jsonDataDetail[0],
+  
   }
 
   handleVideoSelect = id => {
@@ -45,12 +46,12 @@ class App extends Component {
          });
       };
 
-     
+  
 
   render() {
  
 
-    // console.log("selectedVideo:" ,this.state.selectedVideo)
+    let buttonText = "";
 
     const allButselectedVideo = this.state.videosData.filter((video) => video.id !== this.state.selectedVideo.id);
 
@@ -58,10 +59,16 @@ class App extends Component {
 
     return (
       <>
-        <Header />
-        <Hero videosDetail={this.state.videosDetail} selectedVideo={this.state.selectedVideo}/>
+        <Header 
+        buttonText={buttonText} />
+        <Hero 
+        videosDetail={this.state.videosDetail} 
+        selectedVideo={this.state.selectedVideo} />
         <Comments 
-        videosDetail={this.state.videosDetail} selectedVideo={this.state.selectedVideo} />
+        videosDetail={this.state.videosDetail} 
+        selectedVideo={this.state.selectedVideo} 
+        buttonText={this.state.buttonText}/>
+        
         <VideosNext 
             videosData={this.state.videosData} 
             videosDetail={this.state.videosDetail} 
