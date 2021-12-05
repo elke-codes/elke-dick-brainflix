@@ -5,7 +5,7 @@ import React from 'react';
 import jsonData from "../../data/videos.json";
 import jsonDataDetail from "../../data/video-details.json";
 // -- IMPORT COMPONENTS -- //
-import VideoInfoShort from "./VideoInfoShort/VideoInfoShort";
+import VideoInfoShort from "../VideoInfoShort/VideoInfoShort";
 // -- IMPORT SCSS -- //
 import "./VideosNext.scss";
 

@@ -1,6 +1,7 @@
 import React from 'react';
-import Avatar from '../../Avatar/Avatar';
-import Button from '../../Button/Button';
+import Avatar from '../Avatar/Avatar';
+// import Button from './Button/Button';
+import Button from '../Button/Button';
 import "./CommentForm.scss";
 
 

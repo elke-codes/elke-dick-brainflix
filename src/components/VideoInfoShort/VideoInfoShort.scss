@@ -1,8 +1,8 @@
 /// --- VideoInfoShort --- ///
-@use "../../../styles/partials/global" as *;
-@use "../../../styles/partials/mixins" as *;
-@use "../../../styles/partials/typography" as *;
-@use "../../../styles/partials/colors" as *;
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/colors" as *;
 
 .VideoInfoShort {
   @include padding-between-components;

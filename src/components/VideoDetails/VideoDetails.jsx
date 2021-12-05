@@ -1,7 +1,7 @@
 import React from 'react';
 
 //-- IMPORT COMPONENTS -- //
-import DeviderLine from '../../DeviderLine/DeviderLine';
+import DeviderLine from '../DeviderLine/DeviderLine';
 
 const VideoDetails = (props) => {
 

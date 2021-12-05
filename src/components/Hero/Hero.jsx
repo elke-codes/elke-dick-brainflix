@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 
 // -- IMPORT COMPONENTS -- //
 // import Date from "../Date/Date";
-import VideoDetails from './VideoDetails/VideoDetails';
+import VideoDetails from '../VideoDetails/VideoDetails';
 import DeviderLine from "./../DeviderLine/DeviderLine";
 // -- IMPORT SCSS -- //
 import "./Hero.scss";

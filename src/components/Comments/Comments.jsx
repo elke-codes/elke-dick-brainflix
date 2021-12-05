@@ -1,7 +1,7 @@
 /// --- COMMENTS.JS --- ///
-import CommentForm from "./CommentForm/CommentForm";
 import React from "react";
-import CommentsContainer from "./CommentsContainer/CommentsContainer";
+import CommentForm from "../CommentForm/CommentForm";
+import CommentsContainer from "../CommentsContainer/CommentsContainer";
 // -- IMPORT SCSS -- //
 import "./Comments.scss";
 
