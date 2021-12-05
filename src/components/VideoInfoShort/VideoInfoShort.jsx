@@ -10,28 +10,35 @@ import "./VideoInfoShort.scss";
 
 
 // -- GLOBAL VARIABLES -- //
-const handleClick=(id) =>{
-  console.log("clicked", id);
-}
+
 
 // -- COMPONENT DECLARATION -- // 
 
 const VideoInfoShort = (props) => {
 
-  const { id, image, title, channel } = props.allButCurrentVideo;
+  
+  const handleClick= (id)=>{
+    props.handleVideoSelect(id)
+  }
 
-// console.log(props)
     return (
-      <div> {props.allButCurrentVideo.map(video =>(
-        <article className="VideoInfoShort" id={video.id} key={video.id} onClick={() => handleClick(video.id)} >
-         {/* { console.log(video.id)} */}
+      <div> {props.allButselectedVideo.map(video =>(
+        <article 
+        className="video-info-short" 
+        id={video.id} 
+        key={video.id} 
+        onClick={() => handleClick(video.id)} 
+      
+        >
+         { console.log(video.id)}
             <img 
-            className="VideoInfoShort__image"
+            className="video-info-short__image"
             src={video.image} 
+            alt={video.title}
             />
-            <div className="VideoInfoShort__info">
-                <p className="VideoInfoShort__title">{video.title}</p>
-                <p className="VideoInfoShort__channel">{video.channel}</p>
+            <div className="video-info-short__info">
+                <p className="video-info-short__title">{video.title}</p>
+                <p className="video-info-short__channel">{video.channel}</p>
             </div>
         </article>
         )

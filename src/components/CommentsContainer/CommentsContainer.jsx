@@ -14,24 +14,24 @@ import "./CommentsContainer.scss";
 
 
 const CommentsContainer = (props) => {
-// currentVideo[0]!! woof...
-// console.log("props from commentscontainer:", props.currentVideo[0].comments);
-// console.log("curcur",currentVideo.currentVideo);
-// const { id, name, comment, timestamp } = props.currentVideo[0].comments;
-// const name = props.currentVideo.
-// console.log("comment:" ,props.currentVideo.comments[0]);
+// selectedVideo[0]!! woof...
+// console.log("props from commentscontainer:", props.selectedVideo[0].comments);
+// console.log("curcur",selectedVideo.selectedVideo);
+// const { id, name, comment, timestamp } = props.selectedVideo[0].comments;
+// const name = props.selectedVideo.
+// console.log("comment:" ,props.selectedVideo.comments[0]);
 
 
   return (
     <div className="CommentsContainer">
   
-        {/* {props.currentVideo.map(video =>( */}
+        {/* {props.selectedVideo.map(video =>( */}
         
-            {props.currentVideo[0].comments.map(comment => (
+            {props.selectedVideo.comments.map(comment => (
           
-          <article className="Comment">
+          <article className="Comment" key={comment.id}>
                
-                <div className="Comment__top">
+                <div className="Comment__top" >
                     <Avatar />
                     <p className="Comment__name">{comment.name}</p>
                     <p className="Comment__date">{comment.timestamp}</p>

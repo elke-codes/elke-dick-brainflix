@@ -1,6 +1,6 @@
 /// --- HERO.JS --- ///
 // -- IMPORT MODULES -- //
-import React, { Component } from 'react';
+import React from 'react';
 
 // -- IMPORT COMPONENTS -- //
 // import Date from "../Date/Date";
@@ -15,7 +15,7 @@ import "./Hero.scss";
 
 const Hero = (props) => {
   console.log(props);
-  const { image, title} = props.firstSelectedVideo;
+  const { image, title} = props.selectedVideo;
   return (
 
     <section className="Hero">
@@ -25,7 +25,7 @@ const Hero = (props) => {
         <article className="Hero__video-details">
           <h2 className="Hero__title">{title}</h2>
           <DeviderLine />
-         <VideoDetails firstSelectedVideo={props.firstSelectedVideo} videosDetails={props.videosDetails}/>
+         <VideoDetails selectedVideo={props.selectedVideo} videosDetails={props.videosDetails}/>
         </article>
     </section>
   

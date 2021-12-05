@@ -1,10 +1,10 @@
-/// --- VideoInfoShort --- ///
+/// --- video-info-short --- ///
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/colors" as *;
 
-.VideoInfoShort {
+.video-info-short {
   @include padding-between-components;
   display: flex;
   // align-items: flex-start;
