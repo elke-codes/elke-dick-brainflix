@@ -19,6 +19,14 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AvenirNext LT Pro";
+  src: url("../../assets/fonts/AvenirNextLTPro-Demi.woff2") format("woff2"),
+    url("../../assets/fonts/AvenirNextLTPro-Demi.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
 // -- TYPOGRAPHY STYLING -- //
 
 // PAGE HEADER
@@ -26,8 +34,8 @@
 @mixin page-header {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 700;
-  @include padding-headlines;
+  font-weight: 600;
+  // @include padding-headlines;
 
   @include tablet {
     font-size: 33px;
@@ -38,14 +46,14 @@
 @mixin section-header {
   font-size: 12px;
   line-height: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: $secondary-text;
 }
 
 @mixin subheader {
   font-size: 13px;
   line-height: 18px;
-  font-weight: 700;
+  font-weight: 600;
   @include tablet {
     font-size: 14px;
     line-heigt: 22px;

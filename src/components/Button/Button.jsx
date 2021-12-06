@@ -9,10 +9,10 @@ const handleButtonClick = (e) =>{
 }
 
 
-const Button = () => {
+const Button = (props) => {
   return (
    <button className="Button"  onClick={handleButtonClick}>
-     UPLOAD
+     {props.buttonText}
    </button>
   );
 };

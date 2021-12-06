@@ -8,18 +8,13 @@ import "./Header.scss";
 import SearchBar from "../SearchBar/SearchBar";
 
 // -- COMPONENT DECLARATION -- //
-const Header = () => {
+const Header = (props) => {
   return (
   <header className="header">
-        {/* //div for searchbar and avatar flexbox */}
-        {/* //hbar */}
-  
+    
       <BrainflixLogo/>
-      {/* <div className="header__flex"> */}
-         <SearchBar/>
-         <Avatar />
-      {/* </div> */}
-
+      <SearchBar/>
+      <Avatar />
       <Button buttonText="Upload"/>
   </header>
   )

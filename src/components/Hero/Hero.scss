@@ -5,6 +5,18 @@
 .Hero {
   // @include padding-between-components;
   width: 100%;
+  @include body-copy;
+
+  &__title {
+    @include page-header;
+
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 1rem;
+    @include tablet {
+      border: none;
+      padding: 0;
+    }
+  }
 
   &__video-details {
     @include padding-sections;
@@ -18,18 +30,39 @@
   &__info-container {
     display: flex;
     @include padding-between-components;
+    @include tablet {
+      justify-content: space-between;
+      padding: 0;
+    }
   }
 
   &__info-left {
-    margin-right: 6rem;
+    margin-right: 4rem;
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__info-right {
+    @include tablet {
+      display: flex;
+      align-items: center;
+    }
   }
   &__channel {
     @include subheader;
+    @include tablet {
+      margin-right: 1rem;
+    }
   }
 
   &__date {
     @include padding-between-components;
     color: $secondary-text;
+    @include tablet {
+      padding: 0;
+    }
   }
 
   &__views {
@@ -39,6 +72,9 @@
     position: left;
     padding-left: 2rem;
     color: $secondary-text;
+    @include tablet {
+      margin-right: 1rem;
+    }
   }
 
   &__likes {
@@ -50,9 +86,13 @@
     position: left;
     padding-left: 2rem;
     color: $secondary-text;
+    @include tablet {
+      margin: 0;
+    }
   }
 
   &__description {
     @include padding-between-components;
+    @include body-copy;
   }
 }

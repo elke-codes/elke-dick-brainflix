@@ -56,4 +56,7 @@
 
 @mixin padding-sections {
   padding: 1rem;
+  @include tablet {
+    padding: 2rem;
+  }
 }

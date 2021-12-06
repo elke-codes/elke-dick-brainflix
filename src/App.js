@@ -67,7 +67,7 @@ class App extends Component {
         <Comments 
         videosDetail={this.state.videosDetail} 
         selectedVideo={this.state.selectedVideo} 
-        buttonText={this.state.buttonText}
+        buttonText={buttonText}
         />
         <VideosNext 
             videosData={this.state.videosData} 
