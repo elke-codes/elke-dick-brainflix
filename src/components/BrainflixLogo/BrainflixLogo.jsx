@@ -5,6 +5,7 @@ import "./BrainflixLogo.scss";
 
 const BrainflixLogo = () => {
   return (
+    //haven t made this a link yet... 
       <img src={logo} alt="Brainflix logo. Play button and text BRAINFLIX" className="logo"/>
   );
 };
