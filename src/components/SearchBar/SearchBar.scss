@@ -16,10 +16,6 @@
   margin-right: 7%;
   @include body-copy;
 
-  // @include big-mobile {
-  //   width: 90%;
-  // }
-
   @include tablet {
     width: 30%;
     margin: 0;
@@ -27,5 +23,20 @@
 
   @include desktop {
     width: 20%;
+  }
+
+  &--active {
+    border-color: $action-hover;
+  }
+
+  &--error {
+    border-color: #d22d2d;
+  }
+  &--error-message {
+    color: #d22d2d;
+  }
+  //overwriting this default setting that seems to be applied on the "ouline"
+  &:focus-visible {
+    outline-color: $action-hover;
   }
 }

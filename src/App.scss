@@ -1,14 +1,10 @@
 /// --- APP SCSS --- ///
 
 /// --- GLOBAL SCSS --- ///
-
-// @use "../typography.scss" as *;
 @use "./styles/partials/typography.scss" as *;
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/colors" as *;
-
-// bg color $white
 
 *,
 ::before,
@@ -36,7 +32,6 @@ a {
 }
 
 .main {
-  // @include padding-sections;
   @include desktop {
     display: flex;
   }

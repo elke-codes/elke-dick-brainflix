@@ -7,10 +7,8 @@
 .video-info-short {
   @include padding-between-components;
   display: flex;
-  // align-items: flex-start;
 
   &__title {
-    // @include padding-between-components;
     @include subheader;
   }
 
@@ -20,13 +18,11 @@
   }
 
   &__channel {
-    // @include padding-between-components;
     @include body-copy;
     padding-top: 0.5rem;
   }
 
   &__image {
-    // @include margin-between-components;
     @include image;
     width: 120px;
     height: 60px;

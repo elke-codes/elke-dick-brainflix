@@ -2,25 +2,17 @@
 
 .header {
   display: flex;
-  // flex-direction: column;
-  // align-items: center;
   padding: 1rem;
 
   display: flex;
   padding: 1rem;
   flex-wrap: wrap;
   justify-content: center;
-  // &__flex {
-  //   @include padding-between-components;
-  //   display: flex;
-  //   justify-content: space-between;
-  //   width: 100%;
-  // }
+  
   @include big-mobile {
     padding: 1rem 7rem;
   }
   @include tablet {
-    // display: flex;
     padding: 1rem 2rem;
     justify-content: space-between;
     align-items: center;

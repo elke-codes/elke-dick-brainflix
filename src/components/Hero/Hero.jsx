@@ -2,12 +2,9 @@
 // -- IMPORT MODULES -- //
 import React from 'react';
 import Video from '../Video/Video';
-
 // -- IMPORT COMPONENTS -- //
-// import Date from "../Date/Date";
 import VideoDetails from '../VideoDetails/VideoDetails';
 import DividerLine from "./../DividerLine/DividerLine";
-// import { useMatchMedia } from '../../functions/useMatchMedia';
 // -- IMPORT SCSS -- //
 import "./Hero.scss";
 
@@ -18,8 +15,6 @@ import "./Hero.scss";
 const Hero = (props) => {
 
   const { title} = props.selectedVideo;
-
-
  
   return (
 

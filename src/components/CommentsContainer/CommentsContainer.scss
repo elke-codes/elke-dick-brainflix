@@ -21,18 +21,17 @@
   @include tablet {
     align-items: center;
   }
-  // flex-wrap: wrap;
+
   &__top {
-    // @include padding-between-components;
-    // display: flex;
     padding-left: 1rem;
-    // justify-content: space-between;
   }
+
   &__info-wrapper {
     width: 100%;
     display: flex;
     justify-content: space-between;
   }
+
   &__name {
     @include subheader;
     @include tablet {
