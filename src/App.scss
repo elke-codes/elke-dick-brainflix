@@ -34,3 +34,9 @@ p {
 a {
   text-decoration: none;
 }
+
+.main {
+  @include desktop {
+    display: flex;
+  }
+}

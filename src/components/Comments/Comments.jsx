@@ -2,6 +2,7 @@
 import React from "react";
 import CommentForm from "../CommentForm/CommentForm";
 import CommentsContainer from "../CommentsContainer/CommentsContainer";
+import DividerLine from "../DividerLine/DividerLine";
 // -- IMPORT SCSS -- //
 import "./Comments.scss";
 
@@ -17,6 +18,7 @@ const Comments = (props) => {
         <CommentsContainer 
         videosDetail={props.videosDetail} 
         selectedVideo={props.selectedVideo}/>
+        <DividerLine/>
     </section>
   )
 };

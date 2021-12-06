@@ -60,10 +60,12 @@ class App extends Component {
         <Header 
 
         />
+      
         <Hero 
         videosDetail={this.state.videosDetail} 
         selectedVideo={this.state.selectedVideo} 
         />
+          <div className="main">
         <Comments 
         videosDetail={this.state.videosDetail} 
         selectedVideo={this.state.selectedVideo} 
@@ -76,6 +78,7 @@ class App extends Component {
             allButselectedVideo={allButselectedVideo}
             handleVideoSelect={this.handleVideoSelect}
         />
+        </div>
       </>
     );
   }

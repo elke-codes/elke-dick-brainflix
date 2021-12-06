@@ -6,16 +6,30 @@
   @include padding-between-components;
   display: flex;
   @include tablet {
-    margin: 0rem 4rem;
+    // margin: 0rem 4rem;
     padding-bottom: 1rem;
-    border-bottom: 1px solid #e1e1e1;
+    // border-bottom: 1px solid #e1e1e1;
+    // // display:flex;
+    justify-content: space-between;
   }
   @include desktop {
     margin: 0rem 16rem;
   }
+
+  &__wrapper {
+    @include tablet {
+      display: flex;
+      align-items: flex-end;
+
+      width: 100%;
+    }
+  }
   &__input {
     padding-left: 1rem;
     width: 100%;
+    @include tablet {
+      padding-right: 2rem;
+    }
   }
   &__input-title {
     @include section-header;
@@ -35,6 +49,13 @@
     // default state border: 1px solid $mercury
     // active state $bandsite-black;
     //error state #d22d2d;
+    @include tablet {
+      // width: 60%;
+      margin: 0;
+
+      height: 3rem;
+      padding: 1rem;
+    }
     &--active {
       border-color: $action-hover;
     }
@@ -49,10 +70,6 @@
     //overwriting this default setting that seems to be applied on the "ouline"
     &:focus-visible {
       outline-color: $action-hover;
-    }
-    @include tablet {
-      min-height: 3rem;
-      padding: 1rem;
     }
   }
 }

@@ -5,6 +5,9 @@
 
 .Comments {
   @include padding-sections;
+  @include tablet {
+    padding-bottom: 0;
+  }
 
   &__title {
     @include subheader;

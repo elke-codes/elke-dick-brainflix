@@ -5,13 +5,13 @@ import "./DividerLine.scss";
 const DividerLine = (props) => {
 
   const { addedDividerClass } = props;
-  let divider = "";
+  let dividerClass = "";
   if(addedDividerClass) {
-    divider = " " + addedDividerClass;
+    dividerClass = " " + addedDividerClass;
   }
 
   return (
-    <div className={"Divider" + divider}></div>
+    <div className={"Divider" + dividerClass}></div>
   );
 };
 

@@ -8,21 +8,38 @@
 }
 
 .Comment {
+  @include padding-between-components;
+  @include body-copy;
+  display: flex;
+  @include tablet {
+    padding: 0;
+  }
+
+  @include tablet {
+    align-items: center;
+  }
+  // flex-wrap: wrap;
   &__top {
-    @include padding-between-components;
+    // @include padding-between-components;
+    // display: flex;
+    padding-left: 1rem;
+    // justify-content: space-between;
+  }
+  &__info-wrapper {
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
   &__name {
-    @include padding-between-components;
     @include subheader;
-  }
-
-  &__comment {
-    @include padding-between-components;
+    @include tablet {
+      @include padding-between-components;
+    }
   }
 
   &__date {
-    @include padding-between-components;
+    @include tablet {
+      @include padding-between-components;
+    }
   }
 }

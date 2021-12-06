@@ -8,6 +8,7 @@ import { timeAgo } from '../../functions/timeAgo';
 
 // -- IMPORT SCSS -- //
 import "./CommentsContainer.scss";
+import DividerLine from '../DividerLine/DividerLine';
 
 
 const CommentsContainer = (props) => {
@@ -17,18 +18,23 @@ const CommentsContainer = (props) => {
     <div className="CommentsContainer">
         
         {props.selectedVideo.comments.map(comment => (
-          
+          <>
+          <DividerLine addedDividerClass="DeviderLine__comment"/>
           <article className="Comment" key={comment.id}>
                
-                <div className="Comment__top" >
-                    <Avatar />
-                    <p className="Comment__name">{comment.name}</p>
-                    <p className="Comment__date">{timeAgo(comment.timestamp)}</p>
-                </div>
+              
+                    <Avatar addedClass="Avatar__comment"/>
+                     <div className="Comment__top" >
+                    <div className="Comment__info-wrapper"> 
+                      <p className="Comment__name">{comment.name}</p>
+                      <p className="Comment__date">{timeAgo(comment.timestamp)}</p>
+                    </div>
+                {/* </div> */}
                 <p className="Comment__comment">{comment.comment}</p>
+                </div>
         
           </article>
-          
+          </>
             )  
         )}
     </div>

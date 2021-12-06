@@ -10,10 +10,18 @@ const handleButtonClick = (e) =>{
 
 
 const Button = (props) => {
-const { buttonText } = props
+  console.log("from button: ", props)
+
+const { buttonText } = props;
+const { addedButtonClass } = props;
+
+let buttonClass = "";
+if(addedButtonClass) {
+  buttonClass = " " + addedButtonClass;
+}
 
   return (
-   <button className="Button"  onClick={handleButtonClick}>
+   <button className={"Button"+ buttonClass}  onClick={handleButtonClick}>
      {buttonText}
    </button>
   );

@@ -23,7 +23,7 @@ const VideoDetails = (props) => {
           <p className="Hero__likes">{likes}</p>
           </div>
       </div>
-      <DividerLine />
+      <DividerLine addedDividerClass="Divider__hero-bottom"/>
       <p className="Hero__description">{description}</p>
     </>
   );

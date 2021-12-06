@@ -5,6 +5,12 @@
 .VideosNext {
   @include padding-between-components;
   @include padding-sections;
+  @include tablet {
+    padding-top: 0;
+  }
+  @include tablet {
+    width: 45%;
+  }
 
   &__section-title {
     @include padding-between-components;
