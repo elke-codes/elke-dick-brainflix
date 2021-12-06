@@ -1,3 +1,4 @@
+/// --- VIDEODETAILS JSX --- ///
 import React from 'react';
 
 //-- IMPORT COMPONENTS -- //

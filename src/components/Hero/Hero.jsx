@@ -1,4 +1,4 @@
-/// --- HERO.JS --- ///
+/// --- HERO JSX --- ///
 // -- IMPORT MODULES -- //
 import React from 'react';
 import Video from '../Video/Video';

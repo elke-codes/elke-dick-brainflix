@@ -1,3 +1,4 @@
+/// --- DIVIDERLINE JSX --- ///
 import React from 'react';
 import "../../App.scss";
 import "./DividerLine.scss";

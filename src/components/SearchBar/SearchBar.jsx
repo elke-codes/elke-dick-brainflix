@@ -1,4 +1,4 @@
-
+/// --- SEARCHBAR JSX --- ///
 import React from 'react';
 
 

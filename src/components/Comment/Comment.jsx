@@ -1,4 +1,4 @@
-/// --- COMMENT--- ///
+/// --- COMMENT JSX--- ///
 import React from 'react';
 import Avatar from '../Avatar/Avatar';
 import "./Comment.scss";

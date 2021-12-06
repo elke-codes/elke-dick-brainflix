@@ -1,4 +1,4 @@
-/// --- VideoInfoShort --- ///
+/// --- VIDEOINFOSHORT JSX --- ///
 
 import React from 'react';
 

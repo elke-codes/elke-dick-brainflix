@@ -1,4 +1,4 @@
-/// --- VIDEOSNEXT.JSX --- ///
+/// --- VIDEOSNEXT JSX --- ///
 
 // -- IMPORT MODULES -- //
 import React from 'react';

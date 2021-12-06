@@ -1,4 +1,4 @@
-/// --- HEADER.JS --- ///
+/// --- HEADER JSX--- ///
 import React from "react";
 import Button from "../Button/Button";
 import Avatar from "../Avatar/Avatar";
