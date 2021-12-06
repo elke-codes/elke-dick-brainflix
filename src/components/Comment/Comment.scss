@@ -1,0 +1,42 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/colors" as *;
+@use "../../styles/partials/mixins" as *;
+
+.Comment {
+  @include padding-between-components;
+  @include body-copy;
+  display: flex;
+  @include tablet {
+    padding: 0;
+  }
+  @include desktop {
+    padding-right: 2rem;
+  }
+
+  @include tablet {
+    align-items: center;
+  }
+
+  &__top {
+    padding-left: 1rem;
+  }
+
+  &__info-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+    @include subheader;
+    @include tablet {
+      @include padding-between-components;
+    }
+  }
+
+  &__date {
+    @include tablet {
+      @include padding-between-components;
+    }
+  }
+}

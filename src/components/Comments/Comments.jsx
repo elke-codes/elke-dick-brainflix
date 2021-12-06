@@ -16,7 +16,6 @@ const Comments = (props) => {
         <h3 className="Comments__title">{amountOfComments} comments</h3>
         <CommentForm />
         <CommentsContainer 
-        videosDetail={props.videosDetail} 
         selectedVideo={props.selectedVideo}/>
         <DividerLine/>
     </section>

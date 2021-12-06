@@ -15,7 +15,7 @@ const Avatar = (props) => {
 
   return (
     <div className={"Avatar"+ addedAvatarClass}>
-      <img src={Mohan} alt="profile picture" className="Avatar__image" />
+      <img src={Mohan} alt="representation of self" className="Avatar__image" />
     </div>
   );
 };

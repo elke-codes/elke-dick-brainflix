@@ -16,11 +16,6 @@ import Hero from "./components/Hero/Hero";
 import Comments from "./components/Comments/Comments"
 import VideosNext from "./components/VideosNext/VideosNext";
 
-
-
-
-
-
 // -- COMPONENT DECLARATION -- //
 
 

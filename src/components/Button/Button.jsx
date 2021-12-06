@@ -8,9 +8,7 @@ const handleButtonClick = (e) =>{
   e.preventDefault();
 }
 
-
 const Button = (props) => {
-  console.log("from button: ", props)
 
 const { buttonText } = props;
 const { addedButtonClass } = props;
