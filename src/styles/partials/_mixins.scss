@@ -4,6 +4,13 @@
 @use "./colors" as *;
 
 // MEDIA QUERIES //
+
+@mixin big-mobile {
+  @media screen and (min-width: 677px) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
     @content;

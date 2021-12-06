@@ -1,15 +1,31 @@
 @use "../../styles/partials/colors" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
 
 .search {
   background-image: url(../../assets/images/icons/search.svg);
   background-repeat: no-repeat;
   background-position: 0.5rem;
+  background-color: $alabaster;
   padding: 1rem 0;
   padding-left: 2rem;
-  height: 2rem;
+  height: 2.5rem;
   border-radius: 4px;
   border: 1px solid $secondary-text;
-  width: 90%;
-  margin-right: 1rem;
+  width: 80%;
+  margin-right: 7%;
+  @include body-copy;
+
+  // @include big-mobile {
+  //   width: 90%;
+  // }
+
+  @include tablet {
+    width: 30%;
+    margin: 0;
+  }
+
+  @include desktop {
+    width: 20%;
+  }
 }

@@ -2,20 +2,15 @@
 @use "../../styles/partials/colors" as *;
 
 .Avatar {
-  object-position: 30%;
   height: 2.25rem;
   width: 2.25rem;
   object-fit: cover;
   object-position: 30%;
   border-radius: 50%;
+  background-color: $mercury;
 
   @include tablet {
-    height: 3rem;
-    width: 3rem;
-  }
-  &__placeholder {
-    background-color: $mercury;
-    @extend .Avatar;
+    order: 1;
   }
 
   &__image {

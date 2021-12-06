@@ -15,10 +15,10 @@ const Header = () => {
         {/* //hbar */}
   
       <BrainflixLogo/>
-      <div className="header__flex">
+      {/* <div className="header__flex"> */}
          <SearchBar/>
          <Avatar />
-      </div>
+      {/* </div> */}
 
       <Button buttonText="Upload"/>
   </header>
