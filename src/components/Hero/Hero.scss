@@ -9,13 +9,6 @@
 
   &__title {
     @include page-header;
-
-    // border-bottom: 1px solid #e1e1e1;
-    // padding-bottom: 1rem;
-    // @include tablet {
-    //   border: none;
-    //   padding: 0;
-    // }
   }
 
   &__video-details {

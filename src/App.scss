@@ -36,6 +36,7 @@ a {
 }
 
 .main {
+  // @include padding-sections;
   @include desktop {
     display: flex;
   }

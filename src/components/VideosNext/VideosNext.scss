@@ -7,9 +7,13 @@
   @include padding-sections;
   @include tablet {
     padding-top: 0;
-  }
-  @include tablet {
     width: 45%;
+  }
+
+  @include desktop {
+    border-left: 1px solid #e1e1e1;
+    padding-left: 2rem;
+    padding-right: 7rem;
   }
 
   &__section-title {
