@@ -4,12 +4,13 @@ import Button from '../Button/Button';
 import "./CommentForm.scss";
 
 
-const CommentForm = (props) => {
+const CommentForm = () => {
+
   return (
 
     <form action="" className="Form">
             
-              <Avatar />
+              <Avatar addedClass="Avatar__comments"/>
               <div className="Form__input">
                   <label className="Form__input-title" htmlFor="comment">JOIN THE CONVERSATION</label>
                   <input

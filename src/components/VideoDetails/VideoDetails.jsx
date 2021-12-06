@@ -1,7 +1,7 @@
 import React from 'react';
 
 //-- IMPORT COMPONENTS -- //
-import DeviderLine from '../DeviderLine/DeviderLine';
+import DividerLine from '../DividerLine/DividerLine';
 
 // -- IMPORT HELPER FUNCTION --//
 import { timeAgo } from '../../functions/timeAgo';
@@ -23,7 +23,7 @@ const VideoDetails = (props) => {
           <p className="Hero__likes">{likes}</p>
           </div>
       </div>
-      <DeviderLine />
+      <DividerLine />
       <p className="Hero__description">{description}</p>
     </>
   );

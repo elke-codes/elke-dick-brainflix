@@ -51,14 +51,14 @@ class App extends Component {
   render() {
  
 
-    let buttonText = "";
+
 
     const allButselectedVideo = this.state.videosData.filter((video) => video.id !== this.state.selectedVideo.id);
 
     return (
       <>
         <Header 
-        buttonText={buttonText} 
+
         />
         <Hero 
         videosDetail={this.state.videosDetail} 
@@ -67,7 +67,7 @@ class App extends Component {
         <Comments 
         videosDetail={this.state.videosDetail} 
         selectedVideo={this.state.selectedVideo} 
-        buttonText={buttonText}
+
         />
         <VideosNext 
             videosData={this.state.videosData} 

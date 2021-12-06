@@ -8,13 +8,15 @@ import "./Header.scss";
 import SearchBar from "../SearchBar/SearchBar";
 
 // -- COMPONENT DECLARATION -- //
-const Header = (props) => {
+const Header = () => {
+
+
   return (
   <header className="header">
     
       <BrainflixLogo/>
       <SearchBar/>
-      <Avatar />
+      <Avatar addedClass="Avatar__header"/>
       <Button buttonText="Upload"/>
   </header>
   )

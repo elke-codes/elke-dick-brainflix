@@ -6,8 +6,8 @@ import Video from '../Video/Video';
 // -- IMPORT COMPONENTS -- //
 // import Date from "../Date/Date";
 import VideoDetails from '../VideoDetails/VideoDetails';
-import DeviderLine from "./../DeviderLine/DeviderLine";
-import { useMatchMedia } from '../../functions/useMatchMedia';
+import DividerLine from "./../DividerLine/DividerLine";
+// import { useMatchMedia } from '../../functions/useMatchMedia';
 // -- IMPORT SCSS -- //
 import "./Hero.scss";
 
@@ -17,8 +17,8 @@ import "./Hero.scss";
 
 const Hero = (props) => {
 
-  const { image, title} = props.selectedVideo;
-  const isMobileResolution = window.matchMedia('(max-width:767px)');
+  const { title} = props.selectedVideo;
+
 
  
   return (
@@ -29,10 +29,7 @@ const Hero = (props) => {
 
         <article className="Hero__video-details">
           <h2 className="Hero__title">{title}</h2>
-        {/* {isMobileResolution 
-        ? <DeviderLine />
-        : null
-        } */}
+        <DividerLine addedDividerClass="Divider__hero"/>    
         <VideoDetails selectedVideo={props.selectedVideo} />
         </article>
     </section>
