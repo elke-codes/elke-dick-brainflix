@@ -1,5 +1,6 @@
 /// --- BUTTON JSX ---///
 import React from 'react';
+import { Link } from 'react-router-dom';
 // -- IMPORT SCSS -- //
 import "./Button.scss";
 
@@ -20,7 +21,9 @@ if(addedButtonClass) {
 
   return (
    <button className={"Button"+ buttonClass}  onClick={handleButtonClick}>
+     <Link to="/upload">
      {buttonText}
+     </Link>
    </button>
   );
 };

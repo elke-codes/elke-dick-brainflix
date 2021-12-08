@@ -32,4 +32,31 @@
   &__comment {
     height: 3rem;
   }
+
+  &__upload {
+    @include tablet {
+      order: 2;
+    }
+  }
+
+  &__cancel {
+    background-color: $white;
+
+    @include tablet {
+      padding-right: 0;
+      order: 1;
+    }
+
+    > a {
+      color: $action;
+
+      &:hover {
+        background-color: $action-hover;
+      }
+    }
+
+    &:hover {
+      background-color: white;
+    }
+  }
 }

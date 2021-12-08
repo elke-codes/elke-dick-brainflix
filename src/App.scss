@@ -29,6 +29,45 @@ p {
 
 a {
   text-decoration: none;
+  color: $white;
+}
+
+input {
+  @include body-copy;
+  // @include padding-between-components;
+  font-family: "AvenirNext LT Pro", Arial, sans-serif;
+  // display: flex;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid $mercury;
+  background-color: $alabaster;
+  color: black;
+  // default state border: 1px solid $mercury
+  // active state $bandsite-black;
+  //error state #d22d2d;
+  @include tablet {
+    // width: 60%;
+    margin: 0;
+
+    // height: 3rem;
+    padding: 1rem;
+  }
+  &--active {
+    border-color: $action-hover;
+  }
+
+  &--error {
+    // background-color: #d22d2d;
+    border-color: #d22d2d;
+  }
+  &--error-message {
+    color: #d22d2d;
+  }
+  //overwriting this default setting that seems to be applied on the "ouline"
+  &:focus-visible {
+    outline-color: $action-hover;
+  }
 }
 
 .main {

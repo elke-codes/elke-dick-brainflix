@@ -11,21 +11,18 @@ import jsonData from "./data/videos.json";
 import jsonDataDetail from "./data/video-details.json";
 
 // -- IMPORT COMPONENTS -- //
-import Header from "./components/Header/Header";
-import Hero from "./components/Hero/Hero";
-import Comments from "./components/Comments/Comments"
-import VideosNext from "./components/VideosNext/VideosNext";
+
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage/HomePage";
+import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 
 // -- COMPONENT DECLARATION -- //
-
-
 class App extends Component {
 
   state = {
     videosDetail : jsonDataDetail,
     videosData: jsonData,
     selectedVideo : jsonDataDetail[0],
-  
   }
 
   handleVideoSelect = id => {
@@ -41,45 +38,31 @@ class App extends Component {
           behavior: 'smooth' 
          });
       };
-  
 
   render() {
- 
-
-
 
     const allButselectedVideo = this.state.videosData.filter((video) => video.id !== this.state.selectedVideo.id);
 
     return (
       <>
-        <Header 
-
-        />
-      
-        <Hero 
-        videosDetail={this.state.videosDetail} 
-        selectedVideo={this.state.selectedVideo} 
-        />
-          <div className="main">
-        <Comments 
-        videosDetail={this.state.videosDetail} 
-        selectedVideo={this.state.selectedVideo} 
-
-        />
-        <VideosNext 
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact> 
+            <HomePage   
             videosData={this.state.videosData} 
             videosDetail={this.state.videosDetail} 
             selectedVideo={this.state.selectedVideo} 
             allButselectedVideo={allButselectedVideo}
-            handleVideoSelect={this.handleVideoSelect}
-        />
-        </div>
+            handleVideoSelect={this.handleVideoSelect}/>
+          </Route>
+          <Route path="/upload"> 
+             <VideoUploadPage selectedVideo={this.state.selectedVideo} />
+          </Route>
+        </Switch>
+        </BrowserRouter>
       </>
     );
   }
 }
-
-
-
 
 export default App;

@@ -26,10 +26,11 @@
     @include image;
     width: 120px;
     height: 60px;
+    border-radius: 0.25rem;
   }
 
   &:hover {
-    background-color: rgba($color: $brainflix-darkblack, $alpha: 0.1);
+    // background-color: rgba($color: $brainflix-darkblack, $alpha: 0.1);
     cursor: pointer;
   }
 }
