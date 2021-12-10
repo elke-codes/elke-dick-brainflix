@@ -1,0 +1,16 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/colors" as *;
+
+h1 {
+    @include page-header;
+    @include padding-headlines;
+    @include padding-sections;
+}
+
+p {
+    @include body-copy;
+    color: $primary-text;
+    @include padding-headlines;
+    @include padding-sections;
+}

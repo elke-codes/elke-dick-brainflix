@@ -6,20 +6,20 @@ import BrainflixLogo from "../BrainflixLogo/BrainflixLogo";
 // -- IMPORT SCSS -- //
 import "./Header.scss";
 import SearchBar from "../SearchBar/SearchBar";
+import { Link } from "react-router-dom";
 
 // -- COMPONENT DECLARATION -- //
 const Header = () => {
-
-
-  return (
-  <header className="header">
-    
-      <BrainflixLogo/>
-      <SearchBar/>
-      <Avatar addedClass="Avatar__header"/>
-      <Button buttonText="Upload"/>
-  </header>
-  )
+    return (
+        <header className="header">
+            <BrainflixLogo />
+            <SearchBar />
+            <Avatar addedClass="Avatar__header" />
+            <Link to="/upload">
+                <Button buttonText="Upload" />
+            </Link>
+        </header>
+    );
 };
 
 export default Header;
