@@ -18,7 +18,14 @@ class HomePage extends Component {
         // videosDetail: jsonDataDetail,
         selectedVideo: ""
     };
-
+    handleVideoSelect = (id) => {
+        console.log("id from handleVideoSelect", id);
+        this.setState({
+            selectedVideo: this.state.videosData.find(
+                (video) => video.id === id
+            )
+        });
+    };
     componentDidMount() {
         // console.log(getInitialVideoData);
         // getInitialVideoData().then((videosDataList) => {
@@ -50,12 +57,6 @@ class HomePage extends Component {
             .catch((err) => console.log(err));
     }
 
-    handleVideoSelect = (id) => {
-        console.log("id from handleVideoSelect", id);
-        this.setState({
-            selectedVideo: this.state.videoData.find((video) => video.id === id)
-        });
-    };
     //   getVideoDetails(id) {
     //     axios.get(`${API_URL}videos/${video.id}?api_key=${API_KEY}`);
     // }
@@ -81,7 +82,7 @@ class HomePage extends Component {
                 <VideosNext
                     // allButselectedVideo={this.state.allButselectedVideo}
                     videosData={this.state.videosData}
-                    handleVideoSelect={() => this.handleVideoSelect()}
+                    handleVideoSelect={this.handleVideoSelect}
                 />
 
                 {/* </div> */}

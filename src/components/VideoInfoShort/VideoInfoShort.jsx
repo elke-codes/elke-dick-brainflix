@@ -9,7 +9,10 @@ import "./VideoInfoShort.scss";
 
 const VideoInfoShort = (props) => {
     console.log("propsform videoinfoshort", props);
+
     const handleClick = (id) => {
+        console.log("id from handle click", id);
+        console.log("props from handle click", props);
         props.handleVideoSelect(id);
     };
 
