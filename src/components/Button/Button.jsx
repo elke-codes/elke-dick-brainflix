@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 // -- IMPORT SCSS -- //
 import "./Button.scss";
 
-// const handleButtonClick = (e) => {
-//     e.preventDefault();
-// };
+const handleButtonClick = (e) => {
+    e.preventDefault();
+};
 
 const Button = (props) => {
     const { buttonText } = props;

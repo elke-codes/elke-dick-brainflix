@@ -5,32 +5,33 @@
 @use "../../styles/partials/colors" as *;
 
 .video-info-short {
-  @include padding-between-components;
-  display: flex;
+    @include padding-between-components;
+    display: flex;
+    color: $primary-text;
 
-  &__title {
-    @include subheader;
-  }
+    &__title {
+        @include subheader;
+    }
 
-  &__info {
-    width: 70%;
-    padding-left: 1rem;
-  }
+    &__info {
+        width: 70%;
+        padding-left: 1rem;
+    }
 
-  &__channel {
-    @include body-copy;
-    padding-top: 0.5rem;
-  }
+    &__channel {
+        @include body-copy;
+        padding-top: 0.5rem;
+    }
 
-  &__image {
-    @include image;
-    width: 120px;
-    height: 60px;
-    border-radius: 0.25rem;
-  }
+    &__image {
+        @include image;
+        width: 120px;
+        height: 60px;
+        border-radius: 0.25rem;
+    }
 
-  &:hover {
-    // background-color: rgba($color: $brainflix-darkblack, $alpha: 0.1);
-    cursor: pointer;
-  }
+    &:hover {
+        // background-color: rgba($color: $brainflix-darkblack, $alpha: 0.1);
+        cursor: pointer;
+    }
 }

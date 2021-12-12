@@ -10,7 +10,6 @@ import "./VideosNext.scss";
 // -- COMPONENT DECLARATION -- //
 
 const VideosNext = (props) => {
-    console.log("VideosNext");
     return (
         <section className="VideosNext">
             <h3 className="VideosNext__section-title">NEXT VIDEOS</h3>

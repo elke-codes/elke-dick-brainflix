@@ -1,4 +1,3 @@
-import Header from "../../components/Header/Header";
 import Hero from "../../components/Hero/Hero";
 import Comments from "../../components/Comments/Comments";
 import VideosNext from "../../components/VideosNext/VideosNext";
@@ -25,27 +24,12 @@ class HomePage extends Component {
             });
     }
 
-    handleVideoSelect = (id) => {
-        this.setState({
-            selectedVideo: this.getVideoDetails(id)
-        });
-
-        // // https://www.codegrepper.com/code-examples/javascript/onclick+scroll+to+top+javascript
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: "smooth"
-        });
-    };
-
     componentDidMount() {
-        console.log("componentDidMount");
         const currentVideoId = this.props.match.videoID;
 
         axios
             .get(`${API_URL}videos?api_key=${API_KEY}`)
             .then((result) => {
-                console.log("componentDidMount axios then 1");
                 const videosData = result.data;
 
                 this.setState({
@@ -55,7 +39,6 @@ class HomePage extends Component {
                 return videosData[0].id;
             })
             .then((onLoadVideoId) => {
-                console.log("componentDidMount axios then 2");
                 const videoToLoadId =
                     currentVideoId !== undefined
                         ? currentVideoId
@@ -80,11 +63,6 @@ class HomePage extends Component {
     }
 
     render() {
-        console.log("render");
-        // const allButselectedVideo = this.state.videosData.filter(
-        //     (video) => video.id !== this.state.selectedVideo.id
-        // );
-
         return (
             <>
                 {this.state.selectedVideo ? (
@@ -97,10 +75,6 @@ class HomePage extends Component {
                                 selectedVideo={this.state.selectedVideo}
                             />
                             <VideosNext
-                                // allButselectedVideo={this.state.videosData.filter(
-                                //     (video) =>
-                                //         video.id !== this.state.selectedVideo.id
-                                // )}
                                 allButselectedVideo={this.state.videosData.filter(
                                     (video) =>
                                         video.id !== this.state.selectedVideo.id
@@ -119,50 +93,3 @@ class HomePage extends Component {
 }
 
 export default HomePage;
-
-{
-    //     /* handleVideoSelect = (id) => {
-    // //     this.setState({
-    // //         selectedVideo: jsonDataDetail.find((video) => video.id === id)
-    // //     });
-    //     // not in the requirements but so much nicer ux than having to scroll to the top yourself
-    //     // https://www.codegrepper.com/code-examples/javascript/onclick+scroll+to+top+javascript
-    //     window.scroll({
-    //         top: 0,
-    //         left: 0,
-    //         behavior: "smooth"
-    //     });
-    // };
-    // getVideoDetails = (id) => {
-    //     axios
-    //         .get(`${API_URL}videos/${id}?api_key=${API_KEY}`)
-    //         .then((result) => {
-    //             console.log(result);
-    //         })
-    //         .catch((err) => console.log(err));
-    // };
-    //     render() {
-    //         console.log("videosdata from render homepage", this.state.videosData);
-    //         return (
-    //             <>
-    //                 <Header />
-    //                 {/* <Video selectedVideo={this.state.selectedVideo} />
-    //                 <Hero
-    //                     videosDetail={this.state.videosDetail}
-    //                     selectedVideo={this.state.selectedVideo}
-    //                 />
-    //                 <div className="main">
-    //                     <Comments
-    //                         videosDetail={this.state.videosDetail}
-    //                         selectedVideo={this.state.selectedVideo}
-    //                     /> */
-}
-//                 {/* <VideosNext
-//                         allButselectedVideo={this.state.allButselectedVideo}
-//                         handleVideoSelect={this.state.handleVideoSelect}
-//                     /> */}
-//                 {/* </div> */}
-//             </>
-//         );
-//     }
-// } */}

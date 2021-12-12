@@ -6,7 +6,6 @@ export function getInitialVideoData() {
     axios
         .get(`${API_URL}videos?api_key=${API_KEY}`)
         .then((result) => {
-            // console.log(result);
             const videosData = result.data;
             return videosData;
         })

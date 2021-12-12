@@ -19,7 +19,7 @@ const VideoUploadPage = () => {
                         src={thumbnail}
                         alt="topview of someone riding a blue bikes closeup"
                     />
-                    <div className="upload__input">
+                    <form className="upload__input">
                         <label
                             htmlFor="video-title"
                             className="section-title upload__label-title">
@@ -41,7 +41,7 @@ const VideoUploadPage = () => {
                             value="Add a description to your video"
                             className="upload__description-input"
                         />
-                    </div>
+                    </form>
                 </div>
                 <DividerLine />
                 <div className="upload__buttons">

@@ -4,6 +4,14 @@ import Avatar from "../Avatar/Avatar";
 import Button from "../Button/Button";
 import "./CommentForm.scss";
 
+// function handleCommentSubmit() {
+//     e.preventdefault();
+//     console.log("handleCommentSubmit e", e);
+//     // const newComment ={
+//     //     name: e.target
+//     // }
+// }
+
 const CommentForm = (props) => {
     return (
         <form action="" className="Form">
@@ -24,6 +32,7 @@ const CommentForm = (props) => {
                 <Button
                     buttonText="COMMENT"
                     addedButtonClass="Button__comment"
+                    // onClick={}
                 />
             </div>
         </form>

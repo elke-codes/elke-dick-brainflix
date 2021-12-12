@@ -9,69 +9,69 @@
 *,
 ::before,
 ::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "AvenirNext LT Pro", Arial, sans-serif;
-  color: $primary-text;
-  background-color: $white;
+    margin: 0;
+    font-family: "AvenirNext LT Pro", Arial, sans-serif;
+    color: $primary-text;
+    background-color: $white;
 }
 
 h1,
 h2,
 h3,
 p {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
-  color: $white;
+    text-decoration: none;
+    // color: $white;
 }
 
 input {
-  @include body-copy;
-  // @include padding-between-components;
-  font-family: "AvenirNext LT Pro", Arial, sans-serif;
-  // display: flex;
-  border-radius: 0.25rem;
-  padding: 0.75rem;
-  margin: 0.5rem 0;
-  border: 1px solid $mercury;
-  background-color: $alabaster;
-  color: black;
-  // default state border: 1px solid $mercury
-  // active state $bandsite-black;
-  //error state #d22d2d;
-  @include tablet {
-    // width: 60%;
-    margin: 0;
+    @include body-copy;
 
-    // height: 3rem;
-    padding: 1rem;
-  }
-  &--active {
-    border-color: $action-hover;
-  }
+    font-family: "AvenirNext LT Pro", Arial, sans-serif;
+    // display: flex;
+    border-radius: 0.25rem;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid $mercury;
+    background-color: $alabaster;
+    color: black;
+    // default state border: 1px solid $mercury
+    // active state $bandsite-black;
+    //error state #d22d2d;
+    @include tablet {
+        // width: 60%;
+        margin: 0;
 
-  &--error {
-    // background-color: #d22d2d;
-    border-color: #d22d2d;
-  }
-  &--error-message {
-    color: #d22d2d;
-  }
-  //overwriting this default setting that seems to be applied on the "ouline"
-  &:focus-visible {
-    outline-color: $action-hover;
-  }
+        // height: 3rem;
+        padding: 1rem;
+    }
+    &--active {
+        border-color: $action-hover;
+    }
+
+    &--error {
+        // background-color: #d22d2d;
+        border-color: #d22d2d;
+    }
+    &--error-message {
+        color: #d22d2d;
+    }
+    //overwriting this default setting that seems to be applied on the "ouline"
+    &:focus-visible {
+        outline-color: $action-hover;
+    }
 }
 
 .main {
-  @include desktop {
-    display: flex;
-  }
+    @include desktop {
+        display: flex;
+    }
 }

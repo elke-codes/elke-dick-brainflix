@@ -9,7 +9,6 @@ import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 const App = () => {
-    console.log("app runs");
     return (
         <>
             <BrowserRouter>
