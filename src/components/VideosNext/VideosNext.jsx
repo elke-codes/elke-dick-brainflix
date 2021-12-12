@@ -16,7 +16,6 @@ const VideosNext = (props) => {
             <VideoInfoShort
                 allButselectedVideo={props.allButselectedVideo}
                 videosData={props.videosData}
-                handleVideoSelect={props.handleVideoSelect}
             />
         </section>
     );

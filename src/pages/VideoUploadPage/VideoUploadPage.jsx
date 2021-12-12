@@ -4,8 +4,20 @@ import DividerLine from "../../components/DividerLine/DividerLine";
 import Header from "../../components/Header/Header";
 import "./VideoUploadPage.scss";
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
+import { Redirect } from "react-router-dom";
 
-const VideoUploadPage = () => {
+// function handleUpload(e) {
+//     e.preventDefault();
+//     alert("your video is being uploaded, we're bringing you back home");
+//     this.props.history.push("/");
+// }
+
+// function handleCancel(e) {
+//     e.preventDefault();
+//     alert("you have cancelled your upload, we're brining you back home");
+// }
+
+const VideoUploadPage = (props) => {
     return (
         <>
             <DividerLine />
@@ -28,7 +40,7 @@ const VideoUploadPage = () => {
                         <input
                             type="text"
                             name="video-title"
-                            value="Add a title to your video"
+                            placeholder="Add a title to your video"
                         />
                         <label
                             htmlFor="video-description"
@@ -38,21 +50,35 @@ const VideoUploadPage = () => {
                         <input
                             type="text-area"
                             name="video-description"
-                            value="Add a description to your video"
+                            placeholder="Add a description to your video"
                             className="upload__description-input"
                         />
+                        <DividerLine />
+                        <div className="upload__buttons">
+                            <Button
+                                buttonText="upload"
+                                addedButtonClass="Button__upload"
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    alert(
+                                        "your video is being uploaded, we're bringing you back home"
+                                    );
+                                    props.history.push("/");
+                                }}
+                            />
+                            <Button
+                                buttonText="cancel"
+                                addedButtonClass="Button__cancel"
+                                onSubmit={(e) => {
+                                    e.preventDefault();
+                                    alert(
+                                        "your video upload is being cancelled, we're bringing you back home"
+                                    );
+                                    props.history.push("/");
+                                }}
+                            />
+                        </div>
                     </form>
-                </div>
-                <DividerLine />
-                <div className="upload__buttons">
-                    <Button
-                        buttonText="upload"
-                        addedButtonClass="Button__upload"
-                    />
-                    <Button
-                        buttonText="cancel"
-                        addedButtonClass="Button__cancel"
-                    />
                 </div>
             </section>
         </>
