@@ -13,7 +13,6 @@ const Comment = (props) => {
     };
     return props.selectedVideo.comments.map((comment) => (
         <article className="Comment" key={comment.timestamp}>
-            <span>{console.log("rendering", comment.id)}</span>
             <Avatar addedClass="Avatar__comment" />
             <div className="Comment__top">
                 <div className="Comment__info-wrapper">
@@ -24,10 +23,13 @@ const Comment = (props) => {
                     <button
                         id={comment.id}
                         // type="submit"
-                        onClick={(e) => handleClick(e.target.id)}
+                        onClick={() => handleClick(comment.id)}
                         className="delete-button">
                         <span role="img" aria-label="Delete">
                             "Delete 🗑️"
+                        </span>
+                        <span>
+                            {console.log("rendering button id", comment.id)}
                         </span>
                     </button>
                 </div>

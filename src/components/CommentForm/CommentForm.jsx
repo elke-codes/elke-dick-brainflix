@@ -14,6 +14,7 @@ const CommentForm = (props) => {
             e.target.comment.value,
             props.selectedVideo.id
         );
+        e.target.reset();
     };
 
     return (
