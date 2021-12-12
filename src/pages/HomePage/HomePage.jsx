@@ -14,8 +14,8 @@ class HomePage extends Component {
         selectedVideo: null
     };
 
-    //get the video details from the api, then set the state of the selected video to be that video
-    getVideoDetails(videoID) {
+    //get details for the current video and url
+    getVideoDetails = (videoID) => {
         axios
             .get(`${API_URL}videos/${videoID}?api_key=${API_KEY}`)
             .then((resolve) => {
@@ -24,7 +24,6 @@ class HomePage extends Component {
                 });
             })
             .then(() => {
-                // after clicking a link in the videos next section, after having loaded the videodetails, scroll to the top of the page where this newly displayed video lives, so we don't have to scroll up every time
                 // https://www.codegrepper.com/code-examples/javascript/onclick+scroll+to+top+javascript
                 window.scroll({
                     top: 0,
@@ -33,8 +32,25 @@ class HomePage extends Component {
                 });
             })
             .catch((error) => console.log(error));
-    }
+    };
+    //post comment
+    handleComment = (name, comment, videoID) => {
+        const newComment = {
+            name: name,
+            comment: comment
+        };
+        axios
+            .post(
+                `${API_URL}videos/${videoID}/comments?api_key=${API_KEY}`,
+                newComment
+            )
+            .then((resolve) => {
+                this.getVideoDetails(videoID);
+            })
+            .catch((error) => console.log(error));
+    };
 
+    //when the page first loads, get the video details from the api, then set the state of the selected video to be that video
     componentDidMount() {
         const currentVideoId = this.props.match.videoID;
         console.log("this.props.match.videoID", this.props.match.videoID);
@@ -93,6 +109,7 @@ class HomePage extends Component {
                         <Hero selectedVideo={this.state.selectedVideo} />
                         <div className="main">
                             <Comments
+                                onComment={this.handleComment}
                                 selectedVideo={this.state.selectedVideo}
                             />
                             <VideosNext

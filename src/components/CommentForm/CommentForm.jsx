@@ -1,38 +1,51 @@
 /// --- COMMENTFORM JSX --- ///
+
 import React from "react";
 import Avatar from "../Avatar/Avatar";
 import Button from "../Button/Button";
 import "./CommentForm.scss";
 
-function handleCommentSubmit(e) {
-    e.preventDefault();
-    console.log("handleCommentSubmit e", e);
-    // const newComment ={
-    //     name: e.target
-    // }
-}
-
+//render the form to add comments
 const CommentForm = (props) => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("e.target.comment.value", e.target.comment.value);
+        props.onComment(
+            e.target.name.value,
+            e.target.comment.value,
+            props.selectedVideo.id
+        );
+        console.log("clicked", props.selectedVideo.id);
+    };
+
     return (
-        <form action="" className="Form">
+        <form className="Form" onSubmit={handleSubmit}>
             <Avatar addedClass="Avatar__comments" />
-            <div className="Form__wrapper">
-                <div className="Form__input">
-                    <label className="Form__input-title" htmlFor="comment">
-                        JOIN THE CONVERSATION
-                    </label>
-                    <input
-                        type="text"
-                        name="comment"
-                        placeholder="Add a new comment"
-                        id="comment"
-                        className="Form__input-field"
-                    />
-                </div>
+            {/* <div className="Form__wrapper"> */}
+            <div className="Form__input">
+                <label className="Form__input-title" htmlFor="comment">
+                    JOIN THE CONVERSATION
+                </label>
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    id="name"
+                    className="Form__input-field"
+                />
+
+                <input
+                    type="text"
+                    name="comment"
+                    placeholder="Add a new comment"
+                    id="comment"
+                    className="Form__input-field"
+                />
+
                 <Button
                     buttonText="COMMENT"
                     addedButtonClass="Button__comment"
-                    onClick={handleCommentSubmit}
+                    selectedVideo={props.selectedVideo}
                 />
             </div>
         </form>

@@ -27,7 +27,7 @@ const Button = (props) => {
     return (
         <button
             onClick={onSubmit}
-            // type="submit"
+            type="submit"
             className={"Button" + buttonClass}>
             {buttonText}
             {/* onClick={handleButtonClick} */}
