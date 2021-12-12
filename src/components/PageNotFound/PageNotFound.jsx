@@ -4,11 +4,11 @@ import "./PageNotFound.scss";
 
 const PageNotFound = () => {
     return (
-        <div>
-            <h1>{`:( Page not Found `}</h1>
+        <div className="not-found">
+            <h1 className="not-found__header">{`:( Page not Found `}</h1>
 
             <Link to="/">
-                <p>Go back home? </p>
+                <p className="not-found__text">Go back home? </p>
             </Link>
         </div>
     );

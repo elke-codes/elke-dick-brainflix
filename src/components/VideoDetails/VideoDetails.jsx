@@ -8,6 +8,8 @@ import DividerLine from "../DividerLine/DividerLine";
 import { timeAgo } from "../../utils/timeAgo";
 
 const VideoDetails = (props) => {
+    console.log("VideoDetails");
+
     const { channel, timestamp, views, likes, description } =
         props.selectedVideo;
 

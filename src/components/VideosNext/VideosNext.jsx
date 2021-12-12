@@ -10,16 +10,16 @@ import "./VideosNext.scss";
 // -- COMPONENT DECLARATION -- //
 
 const VideosNext = (props) => {
-    console.log("props from videosnext", props);
+    console.log("VideosNext");
     return (
-        <aside className="VideosNext">
+        <section className="VideosNext">
             <h3 className="VideosNext__section-title">NEXT VIDEOS</h3>
             <VideoInfoShort
-                // allButselectedVideo={props.allButselectedVideo}
+                allButselectedVideo={props.allButselectedVideo}
                 videosData={props.videosData}
                 handleVideoSelect={props.handleVideoSelect}
             />
-        </aside>
+        </section>
     );
 };
 

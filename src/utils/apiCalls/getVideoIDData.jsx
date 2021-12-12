@@ -7,7 +7,7 @@ export const getVideoIDData = () => {
         .then((result) => {
             const detailsData = result.data;
 
-            console.log(detailsData);
+            // console.log(detailsData);
         })
         .catch((err) => console.log(err));
 };

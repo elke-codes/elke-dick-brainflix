@@ -8,7 +8,6 @@ import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 const VideoUploadPage = () => {
     return (
         <>
-            <Header />
             <DividerLine />
             <section className="upload">
                 <h2 className="upload__title">Upload Video</h2>

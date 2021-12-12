@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 
 // -- COMPONENT DECLARATION -- //
 const Header = () => {
+    console.log("Header");
+
     return (
         <header className="header">
             <BrainflixLogo />

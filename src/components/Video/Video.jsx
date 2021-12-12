@@ -3,7 +3,8 @@ import React from "react";
 import "./Video.scss";
 
 const Video = (props) => {
-    console.log(props.selectedVideo);
+    console.log("Video");
+
     const { image } = props.selectedVideo;
 
     return (

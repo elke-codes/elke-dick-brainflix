@@ -6,6 +6,7 @@ import "./Comment.scss";
 import { timeAgo } from "../../utils/timeAgo";
 
 const Comment = (props) => {
+    // console.log("comment props", props);
     return props.selectedVideo.comments.map((comment) => (
         <article className="Comment" key={comment.timestamp}>
             <Avatar addedClass="Avatar__comment" />

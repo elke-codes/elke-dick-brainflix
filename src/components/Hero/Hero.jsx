@@ -11,6 +11,7 @@ import "./Hero.scss";
 // -- COMPONENT DECLARATION -- //
 
 const Hero = (props) => {
+    console.log("Hero");
     const { title } = props.selectedVideo;
 
     return (
