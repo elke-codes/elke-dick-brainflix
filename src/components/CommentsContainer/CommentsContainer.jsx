@@ -11,7 +11,10 @@ const CommentsContainer = (props) => {
     return (
         <div className="CommentsContainer">
             <DividerLine addedDividerClass="DeviderLine__comment" />
-            <Comment selectedVideo={props.selectedVideo} />
+            <Comment
+                selectedVideo={props.selectedVideo}
+                onDelete={props.onDelete}
+            />
         </div>
     );
 };

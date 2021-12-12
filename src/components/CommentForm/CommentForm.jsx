@@ -9,7 +9,6 @@ import "./CommentForm.scss";
 const CommentForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
-
         props.onComment(
             e.target.name.value,
             e.target.comment.value,

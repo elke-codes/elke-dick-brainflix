@@ -17,7 +17,10 @@ const Comments = (props) => {
                 selectedVideo={props.selectedVideo}
                 onComment={props.onComment}
             />
-            <CommentsContainer selectedVideo={props.selectedVideo} />
+            <CommentsContainer
+                selectedVideo={props.selectedVideo}
+                onDelete={props.onDelete}
+            />
             <DividerLine />
         </section>
     );

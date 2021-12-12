@@ -6,12 +6,14 @@ import "./Comment.scss";
 import { timeAgo } from "../../utils/timeAgo";
 
 const Comment = (props) => {
-    const handleDelete = (e) => {
-        e.preventDefault();
-        console.log("handleDelete", e.target);
+    const handleClick = (commentID) => {
+        // e.preventDefault();
+        // console.log("handleDeleteclicked", id);
+        props.onDelete(commentID, props.selectedVideo.id);
     };
     return props.selectedVideo.comments.map((comment) => (
         <article className="Comment" key={comment.timestamp}>
+            <span>{console.log("rendering", comment.id)}</span>
             <Avatar addedClass="Avatar__comment" />
             <div className="Comment__top">
                 <div className="Comment__info-wrapper">
@@ -20,8 +22,9 @@ const Comment = (props) => {
                         {timeAgo(comment.timestamp)}{" "}
                     </p>
                     <button
-                        type="submit"
-                        onSubmit={handleDelete}
+                        id={comment.id}
+                        // type="submit"
+                        onClick={(e) => handleClick(e.target.id)}
                         className="delete-button">
                         <span role="img" aria-label="Delete">
                             "Delete 🗑️"

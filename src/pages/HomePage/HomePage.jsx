@@ -50,6 +50,17 @@ class HomePage extends Component {
             .catch((error) => console.log(error));
     };
 
+    handleDelete = (commentID, videoID) => {
+        console.log("handleDelete", commentID);
+        axios
+            .delete(
+                `${API_URL}videos/${videoID}/comments/${commentID}?api_key=${API_KEY}`
+            )
+            .then(() => {
+                this.getVideoDetails(videoID);
+            });
+    };
+
     //when the page first loads, get the video details from the api, then set the state of the selected video to be that video
     componentDidMount() {
         const currentVideoId = this.props.match.videoID;
@@ -104,6 +115,7 @@ class HomePage extends Component {
                             <Comments
                                 onComment={this.handleComment}
                                 selectedVideo={this.state.selectedVideo}
+                                onDelete={this.handleDelete}
                             />
                             <VideosNext
                                 // get all but the currently selected video to be rendered in the nextvideos section
