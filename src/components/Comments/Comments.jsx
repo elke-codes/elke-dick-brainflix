@@ -8,7 +8,6 @@ import "./Comments.scss";
 
 // -- COMPONENT DECLARATION -- //
 const Comments = (props) => {
-    console.log("comments props", props);
     const amountOfComments = props.selectedVideo.comments.length;
 
     return (

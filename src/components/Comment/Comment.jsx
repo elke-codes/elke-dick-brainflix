@@ -23,7 +23,9 @@ const Comment = (props) => {
                         type="submit"
                         onSubmit={handleDelete}
                         className="delete-button">
-                        "Delete 🗑️"
+                        <span role="img" aria-label="Delete">
+                            "Delete 🗑️"
+                        </span>
                     </button>
                 </div>
                 <p className="Comment__comment">{comment.comment}</p>

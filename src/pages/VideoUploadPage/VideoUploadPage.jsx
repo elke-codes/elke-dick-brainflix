@@ -1,21 +1,9 @@
 import React from "react";
 import Button from "../../components/Button/Button";
 import DividerLine from "../../components/DividerLine/DividerLine";
-import Header from "../../components/Header/Header";
+
 import "./VideoUploadPage.scss";
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
-import { Redirect } from "react-router-dom";
-
-// function handleUpload(e) {
-//     e.preventDefault();
-//     alert("your video is being uploaded, we're bringing you back home");
-//     this.props.history.push("/");
-// }
-
-// function handleCancel(e) {
-//     e.preventDefault();
-//     alert("you have cancelled your upload, we're brining you back home");
-// }
 
 const VideoUploadPage = (props) => {
     return (
@@ -61,7 +49,7 @@ const VideoUploadPage = (props) => {
                                 onSubmit={(e) => {
                                     e.preventDefault();
                                     alert(
-                                        "your video is being uploaded, we're bringing you back home"
+                                        "your video is being uploaded, we're dropping you off at home"
                                     );
                                     props.history.push("/");
                                 }}

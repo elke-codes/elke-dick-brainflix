@@ -1,7 +1,7 @@
 /// --- HERO JSX --- ///
 // -- IMPORT MODULES -- //
 import React from "react";
-import Video from "../Video/Video";
+
 // -- IMPORT COMPONENTS -- //
 import VideoDetails from "../VideoDetails/VideoDetails";
 import DividerLine from "./../DividerLine/DividerLine";

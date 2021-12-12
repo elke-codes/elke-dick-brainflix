@@ -53,7 +53,6 @@ class HomePage extends Component {
     //when the page first loads, get the video details from the api, then set the state of the selected video to be that video
     componentDidMount() {
         const currentVideoId = this.props.match.videoID;
-        console.log("this.props.match.videoID", this.props.match.videoID);
 
         // get the video data from the api
         axios
@@ -68,7 +67,6 @@ class HomePage extends Component {
                 return videosData[0].id;
             })
             .then((onPageLoadVideoId) => {
-                console.log("currentVideoId", currentVideoId);
                 //decide which video details to get from the api: if the currentVideoId is undefined(because it is the first one to be loaded on the page and props.match.videoID will thus be undifined) get the info for the onPageLoadVideo, otherwise use the currentVideoId (this.props.match.videoID) to get the data
                 const videoToLoadId =
                     currentVideoId !== undefined
@@ -81,13 +79,8 @@ class HomePage extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        console.log("this.componentDidUpdate.prevProps", prevProps);
-        console.log(
-            "componentDidUpdate this.props.match.params.videoID",
-            this.props.match.params.videoID
-        );
         const newVideoId = this.props.match.params.videoID;
-        console.log("newVideoId", newVideoId);
+
         //check if the previous videoid is the same as our newly clicked video id (we don t want to keep fetching data for the same video, and trigger re renders which will get us in an infinite loop), then if the new video id is not undefined (when the page first renders, this.props.match.params.videoID will be undefined), set the params to the new id, otherwise, it will the first one to load, which we decided will be the first one in the array
         if (prevProps.match.params.videoID !== newVideoId) {
             const videoToLoadId =
