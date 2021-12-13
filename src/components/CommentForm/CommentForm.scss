@@ -4,70 +4,78 @@
 @use "../../styles/partials/colors" as *;
 
 .Form {
-  @include padding-between-components;
-  display: flex;
-  @include tablet {
-    padding-bottom: 1rem;
-    justify-content: space-between;
-  }
-  @include desktop {
-    padding-right: 2rem;
-  }
-
-  &__wrapper {
-    @include tablet {
-      display: flex;
-      align-items: flex-end;
-
-      width: 100%;
-    }
-  }
-  &__input {
-    padding-left: 1rem;
-    width: 100%;
-    @include tablet {
-      padding-right: 2rem;
-    }
-  }
-  &__input-title {
-    @include section-header;
-  }
-
-  &__input-field {
+    @include padding-between-components;
     display: flex;
-    min-height: 2.25rem;
-    height: 7rem;
-    width: 100%;
-    border-radius: 0.25rem;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    border: 1px solid $mercury;
-    background-color: $alabaster;
-    color: black;
-    // default state border: 1px solid $mercury
-    // active state $bandsite-black;
-    //error state #d22d2d;
     @include tablet {
-      // width: 60%;
-      margin: 0;
-
-      height: 3rem;
-      padding: 1rem;
+        padding-bottom: 1rem;
+        justify-content: space-between;
     }
-    &--active {
-      border-color: $action-hover;
+    @include desktop {
+        padding-right: 2rem;
     }
 
-    &--error {
-      // background-color: #d22d2d;
-      border-color: #d22d2d;
+    &__wrapper {
+        @include tablet {
+            display: flex;
+            align-items: flex-end;
+
+            width: 100%;
+        }
     }
-    &--error-message {
-      color: #d22d2d;
+    &__input {
+        padding-left: 1rem;
+        width: 100%;
+        @include tablet {
+            padding-right: 2rem;
+        }
     }
-    //overwriting this default setting that seems to be applied on the "ouline"
-    &:focus-visible {
-      outline-color: $action-hover;
+    &__input-title {
+        @include section-header;
     }
-  }
+
+    &__input-field {
+        display: flex;
+        min-height: 2.25rem;
+        height: 7rem;
+        width: 100%;
+        border-radius: 0.25rem;
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+        border: 1px solid $mercury;
+        background-color: $alabaster;
+        color: black;
+        // default state border: 1px solid $mercury
+        // active state $bandsite-black;
+        //error state #d22d2d;
+        @include tablet {
+            margin: 0;
+            height: 3rem;
+            padding: 1rem;
+        }
+
+        &--name {
+            height: 3rem;
+            width: 100%;
+        }
+        &--comment {
+            @include margin-between-components;
+            height: 7rem;
+            width: 100%;
+        }
+        &--active {
+            border-color: $action-hover;
+        }
+
+        &--error {
+            // background-color: #d22d2d;
+            border-color: #d22d2d;
+        }
+        &--error-message {
+            color: #d22d2d;
+        }
+        //overwriting this default setting that seems to be applied on the "ouline"
+        &:focus-visible {
+            outline-color: $action-hover;
+        }
+    }
 }

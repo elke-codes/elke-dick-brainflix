@@ -1,58 +1,56 @@
 @use "../../styles/partials/typography" as *;
 @use "../../styles/partials/mixins" as *;
 .section-title {
-  @include section-header;
-  @include padding-between-components;
+    @include section-header;
+    @include padding-between-components;
 }
 
 .upload {
-  @include padding-sections;
+    @include padding-sections;
 
-  &__title {
-    @include page-header;
-  }
-  &__image {
-    // @include padding-between-components;
-    object-fit: contain;
-    width: 100%;
-    @include tablet {
-      width: 50%;
+    &__title {
+        @include page-header;
     }
-  }
+    &__image {
+        object-fit: contain;
+        width: 100%;
+        @include tablet {
+            width: 50%;
+        }
+    }
 
-  &__label-title {
-    @include desktop {
-      padding-top: 0;
+    &__label-title {
+        @include desktop {
+            padding-top: 0;
+        }
     }
-  }
-  &__input {
-    // @include padding-between-components;
-    display: flex;
-    flex-direction: column;
-    @include desktop {
-      padding-left: 4rem;
-      width: 100%;
+    &__input {
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            padding-left: 4rem;
+            width: 100%;
+        }
     }
-  }
 
-  &__description-input {
-    @include desktop {
-      height: 100%;
+    &__description-input {
+        @include desktop {
+            height: 100%;
+        }
     }
-  }
 
-  &__buttons {
-    width: 100%;
-    @include padding-between-components;
-    @include tablet {
-      display: flex;
-      justify-content: right;
+    &__buttons {
+        width: 100%;
+        @include padding-between-components;
+        @include tablet {
+            display: flex;
+            justify-content: right;
+        }
     }
-  }
 
-  &__wrapper {
-    @include desktop {
-      display: flex;
+    &__wrapper {
+        @include desktop {
+            display: flex;
+        }
     }
-  }
 }

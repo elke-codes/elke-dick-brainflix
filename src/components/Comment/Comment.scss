@@ -4,40 +4,53 @@
 @use "../../styles/partials/mixins" as *;
 
 .Comment {
-  @include padding-between-components;
-  @include body-copy;
-  display: flex;
-  @include tablet {
-    padding: 0;
-  }
-  @include desktop {
-    padding-right: 2rem;
-  }
-
-  @include tablet {
-    align-items: center;
-  }
-
-  &__top {
-    padding-left: 1rem;
-  }
-
-  &__info-wrapper {
-    width: 100%;
+    @include padding-between-components;
+    @include body-copy;
     display: flex;
-    justify-content: space-between;
-  }
-
-  &__name {
-    @include subheader;
     @include tablet {
-      @include padding-between-components;
+        padding: 0;
     }
-  }
+    @include desktop {
+        padding-right: 2rem;
+    }
 
-  &__date {
     @include tablet {
-      @include padding-between-components;
+        align-items: center;
     }
-  }
+
+    &__top {
+        padding-left: 1rem;
+        width: 100%;
+    }
+
+    &__info-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__name {
+        @include subheader;
+        @include tablet {
+            @include padding-between-components;
+            margin-right: 1rem;
+        }
+    }
+
+    &__date {
+        @include tablet {
+            @include padding-between-components;
+            margin-right: 24rem;
+        }
+    }
+    &__delete-button {
+        background-color: transparent;
+        border: none;
+        @include body-copy;
+        color: $secondary-text;
+        padding: 0;
+        @include tablet {
+            @include padding-between-components;
+        }
+    }
 }

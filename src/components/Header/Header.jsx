@@ -15,7 +15,7 @@ const Header = () => {
             <BrainflixLogo />
             <SearchBar />
             <Avatar addedClass="Avatar__header" />
-            <Link to="/upload">
+            <Link to="/upload" className="header__link">
                 <Button buttonText="Upload" />
             </Link>
         </header>

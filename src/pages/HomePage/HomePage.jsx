@@ -109,14 +109,18 @@ class HomePage extends Component {
                 {this.state.selectedVideo ? (
                     <>
                         <Video selectedVideo={this.state.selectedVideo} />
-
-                        <Hero selectedVideo={this.state.selectedVideo} />
                         <div className="main">
-                            <Comments
-                                onComment={this.handleComment}
-                                selectedVideo={this.state.selectedVideo}
-                                onDelete={this.handleDelete}
-                            />
+                            <div className="main__container">
+                                <Hero
+                                    selectedVideo={this.state.selectedVideo}
+                                />
+
+                                <Comments
+                                    onComment={this.handleComment}
+                                    selectedVideo={this.state.selectedVideo}
+                                    onDelete={this.handleDelete}
+                                />
+                            </div>
                             <VideosNext
                                 // get all but the currently selected video to be rendered in the nextvideos section
                                 allButselectedVideo={this.state.videosData.filter(

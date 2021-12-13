@@ -29,14 +29,11 @@ p {
 
 a {
     text-decoration: none;
-    // color: $white;
 }
 
 input {
     @include body-copy;
-
     font-family: "AvenirNext LT Pro", Arial, sans-serif;
-    // display: flex;
     border-radius: 0.25rem;
     padding: 0.75rem;
     margin: 0.5rem 0;
@@ -47,10 +44,8 @@ input {
     // active state $bandsite-black;
     //error state #d22d2d;
     @include tablet {
-        // width: 60%;
         margin: 0;
 
-        // height: 3rem;
         padding: 1rem;
     }
     &--active {
@@ -58,7 +53,6 @@ input {
     }
 
     &--error {
-        // background-color: #d22d2d;
         border-color: #d22d2d;
     }
     &--error-message {

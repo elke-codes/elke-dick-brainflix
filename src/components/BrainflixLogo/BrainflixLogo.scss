@@ -2,8 +2,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .logo {
-  max-width: 120px;
-  max-height: 25px;
+  max-width: 7.5rem;
+  max-height: 1.5625rem;
   margin-bottom: 1rem;
 
   @include tablet {

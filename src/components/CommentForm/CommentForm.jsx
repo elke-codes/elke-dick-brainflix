@@ -30,15 +30,15 @@ const CommentForm = (props) => {
                     name="name"
                     placeholder="Enter your name"
                     id="name"
-                    className="Form__input-field"
+                    className="Form__input-field--name"
                 />
 
                 <input
-                    type="text"
+                    type="textarea"
                     name="comment"
                     placeholder="Add a new comment"
                     id="comment"
-                    className="Form__input-field"
+                    className="Form__input-field--comment"
                 />
 
                 <Button

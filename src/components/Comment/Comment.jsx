@@ -7,8 +7,6 @@ import { timeAgo } from "../../utils/timeAgo";
 
 const Comment = (props) => {
     const handleClick = (commentID) => {
-        // e.preventDefault();
-        // console.log("handleDeleteclicked", id);
         props.onDelete(commentID, props.selectedVideo.id);
     };
     return props.selectedVideo.comments.map((comment) => (
@@ -22,11 +20,10 @@ const Comment = (props) => {
                     </p>
                     <button
                         id={comment.id}
-                        // type="submit"
                         onClick={() => handleClick(comment.id)}
-                        className="delete-button">
+                        className="Comment__delete-button">
                         <span role="img" aria-label="Delete">
-                            "Delete 🗑️"
+                            Delete 🗑️
                         </span>
                         <span>
                             {console.log("rendering button id", comment.id)}
