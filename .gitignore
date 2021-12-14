@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/client/node_modules
 /.pnp
 .pnp.js
 
@@ -36,4 +37,4 @@ ehthumbs.db
 todo.md
 todo-s2.md
 README.md
-/mockups
+/client/mockups
