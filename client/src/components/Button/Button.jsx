@@ -5,21 +5,21 @@ import React from "react";
 import "./Button.scss";
 
 const Button = (props) => {
-    const { buttonText, addedButtonClass, onSubmit } = props;
+	const { buttonText, addedButtonClass, onSubmit } = props;
 
-    let buttonClass = "";
-    if (addedButtonClass) {
-        buttonClass = " " + addedButtonClass;
-    }
+	let buttonClass = "";
+	if (addedButtonClass) {
+		buttonClass = " " + addedButtonClass;
+	}
 
-    return (
-        <button
-            onClick={onSubmit}
-            type="submit"
-            className={"Button" + buttonClass}>
-            {buttonText}
-        </button>
-    );
+	return (
+		<button
+			onClick={onSubmit}
+			type="submit"
+			className={"Button" + buttonClass}>
+			{buttonText}
+		</button>
+	);
 };
 
 export default Button;

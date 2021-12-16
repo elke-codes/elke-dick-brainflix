@@ -1,6 +1,5 @@
 const express = require("express");
 const fs = require("fs");
-const { networkInterfaces } = require("os");
 const app = express();
 const { v4: uuid } = require("uuid");
 
@@ -17,7 +16,7 @@ const writeFile = (videosData) => {
 	fs.writeFileSync("./data/videos.json", JSON.stringify(videosData, null, 2));
 };
 
-//be able to send json when post
+//be able to send json body when post
 app.use(express.json());
 
 // Fetching a list of games: GET /games
