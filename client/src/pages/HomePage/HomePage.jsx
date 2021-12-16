@@ -23,14 +23,6 @@ class HomePage extends Component {
 					selectedVideo: resolve.data
 				});
 			})
-			// .then(() => {
-			//     // https://www.codegrepper.com/code-examples/javascript/onclick+scroll+to+top+javascript
-			//     window.scroll({
-			//         top: 0,
-			//         left: 0,
-			//         behavior: "smooth"
-			//     });
-			// })
 			.catch((error) => console.log("get video details", error));
 	};
 	//post comment
@@ -49,7 +41,7 @@ class HomePage extends Component {
 			})
 			.catch((error) => console.log("post comment", error));
 	};
-
+	//delete a comment
 	handleDelete = (commentID, videoID) => {
 		axios
 			.delete(

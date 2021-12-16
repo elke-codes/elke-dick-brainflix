@@ -6,6 +6,15 @@ import "./VideoUploadPage.scss";
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import axios from "axios";
 
+function handleVideoSubmit() {
+	const newVideo = {
+		name: "name from inputfield",
+		description: "description from inputfield"
+		// do id and everything stuff here or on backend???
+	};
+	axios.post("url").them();
+}
+
 const VideoUploadPage = (props) => {
 	return (
 		<>
@@ -28,6 +37,7 @@ const VideoUploadPage = (props) => {
 							);
 							props.history.push("/");
 						}}
+						// {handleVideoSubmit}
 						className="upload__input">
 						<label
 							htmlFor="video-title"
@@ -55,7 +65,7 @@ const VideoUploadPage = (props) => {
 							<Button
 								buttonText="upload"
 								addedButtonClass="Button__upload"
-								// onSubmit=
+								// onSubmit={handleVideoSubmit}
 							/>
 							<Button
 								buttonText="cancel"

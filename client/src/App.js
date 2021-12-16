@@ -9,19 +9,17 @@ import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage";
 import PageNotFound from "./components/PageNotFound/PageNotFound";
 
 const App = () => {
-    return (
-        <>
-            <BrowserRouter>
-                <Header />
-                <Switch>
-                    <Route path="/videos/:videoID" component={HomePage} />
-                    <Route path="/" exact component={HomePage} />
-                    <Route path="/upload" component={VideoUploadPage} />
-                    <Route component={PageNotFound} />
-                </Switch>
-            </BrowserRouter>
-        </>
-    );
+	return (
+		<BrowserRouter>
+			<Header />
+			<Switch>
+				<Route path="/videos/:videoID" component={HomePage} />
+				<Route path="/" exact component={HomePage} />
+				<Route path="/upload" component={VideoUploadPage} />
+				<Route component={PageNotFound} />
+			</Switch>
+		</BrowserRouter>
+	);
 };
 
 export default App;
