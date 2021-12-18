@@ -14,7 +14,6 @@ function handleVideoSubmit() {
 	};
 	axios.post("url").them();
 }
-
 const VideoUploadPage = (props) => {
 	return (
 		<>
