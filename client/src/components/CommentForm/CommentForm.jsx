@@ -7,48 +7,49 @@ import "./CommentForm.scss";
 
 //render the form to add comments
 const CommentForm = (props) => {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        props.onComment(
-            e.target.name.value,
-            e.target.comment.value,
-            props.selectedVideo.id
-        );
-        e.target.reset();
-    };
+	const handleSubmit = (e) => {
+		console.log("comment button hit");
+		e.preventDefault();
+		props.onComment(
+			e.target.name.value,
+			e.target.comment.value,
+			props.selectedVideo.id
+		);
+		e.target.reset();
+	};
 
-    return (
-        <form className="Form" onSubmit={handleSubmit}>
-            <Avatar addedClass="Avatar__comments" />
-            {/* <div className="Form__wrapper"> */}
-            <div className="Form__input">
-                <label className="Form__input-title" htmlFor="comment">
-                    JOIN THE CONVERSATION
-                </label>
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Enter your name"
-                    id="name"
-                    className="Form__input-field--name"
-                />
+	return (
+		<form className="Form" onSubmit={handleSubmit}>
+			<Avatar addedClass="Avatar__comments" />
+			{/* <div className="Form__wrapper"> */}
+			<div className="Form__input">
+				<label className="Form__input-title" htmlFor="comment">
+					JOIN THE CONVERSATION
+				</label>
+				<input
+					type="text"
+					name="name"
+					placeholder="Enter your name"
+					id="name"
+					className="Form__input-field--name"
+				/>
 
-                <input
-                    type="textarea"
-                    name="comment"
-                    placeholder="Add a new comment"
-                    id="comment"
-                    className="Form__input-field--comment"
-                />
+				<input
+					type="textarea"
+					name="comment"
+					placeholder="Add a new comment"
+					id="comment"
+					className="Form__input-field--comment"
+				/>
 
-                <Button
-                    buttonText="COMMENT"
-                    addedButtonClass="Button__comment"
-                    selectedVideo={props.selectedVideo}
-                />
-            </div>
-        </form>
-    );
+				<Button
+					buttonText="COMMENT"
+					addedButtonClass="Button__comment"
+					selectedVideo={props.selectedVideo}
+				/>
+			</div>
+		</form>
+	);
 };
 
 export default CommentForm;

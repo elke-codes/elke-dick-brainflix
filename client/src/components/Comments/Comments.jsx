@@ -8,11 +8,19 @@ import "./Comments.scss";
 
 // -- COMPONENT DECLARATION -- //
 const Comments = (props) => {
-	const amountOfComments = props.selectedVideo.comments.length;
+	function checkAmountOfComments() {
+		const comments = props.selectedVideo.comments;
+
+		if (comments.length === 0) {
+			return "Be the first to add a comment!";
+		} else {
+			return `${comments.length} comments`;
+		}
+	}
 
 	return (
 		<section className="Comments">
-			<h3 className="Comments__title">{amountOfComments} comments</h3>
+			<h3 className="Comments__title">{checkAmountOfComments()}</h3>
 			<CommentForm
 				selectedVideo={props.selectedVideo}
 				onComment={props.onComment}

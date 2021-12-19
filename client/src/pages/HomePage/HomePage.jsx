@@ -29,6 +29,7 @@ class HomePage extends Component {
 	};
 	//post comment
 	handleComment = (name, comment, videoID) => {
+		console.log("handlecomment");
 		const newComment = {
 			name: name,
 			comment: comment

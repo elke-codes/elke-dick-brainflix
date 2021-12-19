@@ -6,13 +6,14 @@ import "./VideoUploadPage.scss";
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import axios from "axios";
 
+function handleCancel(e) {
+	e.preventDefault();
+	alert("Video upload being cancelled");
+	e.target.reset();
+}
 function handleVideoSubmit(e) {
 	e.preventDefault();
-	console.log(
-		"submit clicked",
-		e.target.title.value,
-		e.target.description.value
-	);
+
 	const newVideo = {
 		title: e.target.title.value,
 		description: e.target.description.value
@@ -82,7 +83,7 @@ const VideoUploadPage = (props) => {
 							<Button
 								buttonText="cancel"
 								addedButtonClass="Button__cancel"
-								onSubmit={handleVideoSubmit}
+								onSubmit={handleCancel}
 								// onSubmit={(e) => {
 								// 	console.log("button clicked");
 								// 	e.preventDefault();

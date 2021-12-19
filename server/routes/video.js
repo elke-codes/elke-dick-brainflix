@@ -60,36 +60,21 @@ router.get("/:videoID", (req, res) => {
 router.post("/", (req, res) => {
 	//get the most up to date data
 	const videosData = readData();
-	console.log("got recent data");
+	console.log("got recent data", videosData);
 	console.log("req body title", req.body);
-
-	// It's a good idea to setup validation for your endpoints to make sure the data required is sent in a request
-	if (
-		!req.body.title ||
-		// !req.body.channel ||
-		// !req.body.image ||
-
-		!req.body.description
-	) {
-		return res
-			.status(400)
-			.send(
-				"Please make sure to include title,  and description of the video"
-			);
-	}
 
 	// We create IDs on a server, so it's not going to be a part of a request, rather we can use uuid or similar library to generate the new id
 	const newVideo = {
 		title: req.body.title,
 		channel: "AnonyMouse",
 		description: req.body.description,
-		views: "",
-		likes: "",
+		views: 69000,
+		likes: 420,
 		video: "https://project-2-api.herokuapp.com/stream?api_key=elkedick",
 		timestamp: Date.now(),
 		comments: [],
 		id: uuid(),
-		image: "https://picsum.photos/1920/1080"
+		image: "http://localhost:8080/images/image.jpg"
 	};
 
 	// // Update our gamesData array and then write the updates to a games data JSON file
@@ -100,4 +85,55 @@ router.post("/", (req, res) => {
 	res.status(201).json(newVideo);
 });
 
+router.post("/:videoID/comments", (req, res) => {
+	//get the most up to date data
+	const videosData = readData();
+	console.log("videosdata post comment", videosData);
+	console.log("got recent data");
+	console.log("req body title", req.body);
+
+	// It's a good idea to setup validation for your endpoints to make sure the data required is sent in a request
+	// if (
+	// 	!req.body.title ||
+	// 	// !req.body.channel ||
+	// 	// !req.body.image ||
+
+	// 	!req.body.description
+	// ) {
+	// 	return res
+	// 		.status(400)
+	// 		.send(
+	// 			"Please make sure to include title,  and description of the video"
+	// 		);
+	// }
+
+	// We create IDs on a server, so it's not going to be a part of a request, rather we can use uuid or similar library to generate the new id
+	const newComment = {
+		name: req.body.name,
+		comment: req.body.comment
+	};
+
+	// // Update our gamesData array and then write the updates to a games data JSON file
+	videosData.comments.push(newComment);
+	writeFile(videosData);
+
+	// // For POST requests we will send back a 201(Created) status code and it's common to send the newly created object (in case we need that id) in a response
+	res.status(201).json(newComment);
+});
+
 module.exports = router;
+
+// It's a good idea to setup validation for your endpoints to make sure the data required is sent in a request
+// if (
+// 	!req.body.title ||
+// 	// !req.body.channel ||
+// 	// !req.body.image ||
+
+// 	!req.body.description
+// ) {
+// 	return res
+// 		.status(400)
+// 		.send(
+// 			"Please make sure to include title,  and description of the video"
+// 		);
+// }
