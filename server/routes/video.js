@@ -45,6 +45,7 @@ router.get("/", (req, res) => {
 	res.status(200).json(newVideosData);
 });
 
+// get detailed info for a specific video GET /video/:videoID
 router.get("/:videoID", (req, res) => {
 	const videosData = readData();
 	// console.log(req.params);
@@ -57,6 +58,7 @@ router.get("/:videoID", (req, res) => {
 	res.status(200).json(video);
 });
 
+// post a new "video"
 router.post("/", (req, res) => {
 	//get the most up to date data
 	const videosData = readData();
@@ -85,28 +87,13 @@ router.post("/", (req, res) => {
 	res.status(201).json(newVideo);
 });
 
+// post a comment to a specific video
 router.post("/:videoID/comments", (req, res) => {
 	//get the most up to date data
 	const videosData = readData();
 	console.log("videosdata post comment", videosData);
 	console.log("got recent data");
 	console.log("req body title", req.body);
-
-	// It's a good idea to setup validation for your endpoints to make sure the data required is sent in a request
-	// if (
-	// 	!req.body.title ||
-	// 	// !req.body.channel ||
-	// 	// !req.body.image ||
-
-	// 	!req.body.description
-	// ) {
-	// 	return res
-	// 		.status(400)
-	// 		.send(
-	// 			"Please make sure to include title,  and description of the video"
-	// 		);
-	// }
-
 	// We create IDs on a server, so it's not going to be a part of a request, rather we can use uuid or similar library to generate the new id
 	const newComment = {
 		name: req.body.name,
