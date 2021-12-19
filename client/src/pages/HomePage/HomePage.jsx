@@ -31,8 +31,8 @@ class HomePage extends Component {
 	handleComment = (name, comment, videoID) => {
 		console.log("handlecomment");
 		const newComment = {
-			name: name,
-			comment: comment
+			name,
+			comment
 		};
 		axios
 			.post(
