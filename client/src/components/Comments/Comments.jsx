@@ -8,22 +8,22 @@ import "./Comments.scss";
 
 // -- COMPONENT DECLARATION -- //
 const Comments = (props) => {
-    const amountOfComments = props.selectedVideo.comments.length;
+	const amountOfComments = props.selectedVideo.comments.length;
 
-    return (
-        <section className="Comments">
-            <h3 className="Comments__title">{amountOfComments} comments</h3>
-            <CommentForm
-                selectedVideo={props.selectedVideo}
-                onComment={props.onComment}
-            />
-            <CommentsContainer
-                selectedVideo={props.selectedVideo}
-                onDelete={props.onDelete}
-            />
-            <DividerLine />
-        </section>
-    );
+	return (
+		<section className="Comments">
+			<h3 className="Comments__title">{amountOfComments} comments</h3>
+			<CommentForm
+				selectedVideo={props.selectedVideo}
+				onComment={props.onComment}
+			/>
+			<CommentsContainer
+				selectedVideo={props.selectedVideo}
+				onDelete={props.onDelete}
+			/>
+			<DividerLine />
+		</section>
+	);
 };
 
 export default Comments;

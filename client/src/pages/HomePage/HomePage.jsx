@@ -14,10 +14,12 @@ class HomePage extends Component {
 		selectedVideo: null
 	};
 
+	// axiosService = axios.create({ baseURL: "localhost:8080" });
+
 	//get details for the current video and url
 	getVideoDetails = (videoID) => {
 		axios
-			.get(`${API_URL}videos/${videoID}?api_key=${API_KEY}`)
+			.get(`http://localhost:8080/videos/${videoID}`)
 			.then((resolve) => {
 				this.setState({
 					selectedVideo: resolve.data
@@ -33,7 +35,7 @@ class HomePage extends Component {
 		};
 		axios
 			.post(
-				`${API_URL}videos/${videoID}/comments?api_key=${API_KEY}`,
+				`http://localhost:8080/videos/${videoID}/comments`,
 				newComment
 			)
 			.then((resolve) => {
@@ -45,7 +47,7 @@ class HomePage extends Component {
 	handleDelete = (commentID, videoID) => {
 		axios
 			.delete(
-				`${API_URL}videos/${videoID}/comments/${commentID}?api_key=${API_KEY}`
+				`http://localhost:8080/videos/${videoID}/comments/${commentID}`
 			)
 			.then(() => {
 				this.getVideoDetails(videoID);
@@ -55,12 +57,14 @@ class HomePage extends Component {
 
 	//when the page first loads, get the video details from the api, then set the state of the selected video to be that video
 	componentDidMount() {
+		console.log("componentdidmount");
 		const currentVideoId = this.props.match.videoID;
 
 		// get the video data from the api
 		axios
-			.get(`${API_URL}videos?api_key=${API_KEY}`)
+			.get(`http://localhost:8080/videos`)
 			.then((result) => {
+				console.log("componentdidmount get videos", result);
 				const videosData = result.data;
 				//populate our videoData array with info from the api
 				this.setState({

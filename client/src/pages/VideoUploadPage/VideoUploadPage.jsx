@@ -6,13 +6,26 @@ import "./VideoUploadPage.scss";
 import thumbnail from "../../assets/images/Upload-video-preview.jpg";
 import axios from "axios";
 
-function handleVideoSubmit() {
+function handleVideoSubmit(e) {
+	e.preventDefault();
+	console.log(
+		"submit clicked",
+		e.target.title.value,
+		e.target.description.value
+	);
 	const newVideo = {
-		name: "name from inputfield",
-		description: "description from inputfield"
-		// do id and everything stuff here or on backend???
+		title: e.target.title.value,
+		description: e.target.description.value
 	};
-	axios.post("url").them();
+	axios
+		.post(`http://localhost:8080/videos`, newVideo)
+		.then((response) => {
+			console.log("response post video", response);
+			e.target.reset();
+			alert("your video is being uploaded");
+			// props.history.push("/");
+		})
+		.catch((error) => console.log("error in post video", error));
 }
 const VideoUploadPage = (props) => {
 	return (
@@ -29,14 +42,14 @@ const VideoUploadPage = (props) => {
 						alt="topview of someone riding a blue bikes closeup"
 					/>
 					<form
-						onSubmit={(e) => {
-							e.preventDefault();
-							alert(
-								"your video is being uploaded, we're dropping you off at home"
-							);
-							props.history.push("/");
-						}}
-						// {handleVideoSubmit}
+						// onSubmit={(e) => {
+						// 	e.preventDefault();
+						// 	alert(
+						// 		"your video is being uploaded, we're dropping you off at home"
+						// 	);
+						// 	props.history.push("/");
+						// }}
+						onSubmit={handleVideoSubmit}
 						className="upload__input">
 						<label
 							htmlFor="video-title"
@@ -45,7 +58,7 @@ const VideoUploadPage = (props) => {
 						</label>
 						<input
 							type="text"
-							name="video-title"
+							name="title"
 							placeholder="Add a title to your video"
 						/>
 						<label
@@ -55,7 +68,7 @@ const VideoUploadPage = (props) => {
 						</label>
 						<input
 							type="text-area"
-							name="video-description"
+							name="description"
 							placeholder="Add a description to your video"
 							className="upload__description-input"
 						/>
@@ -64,20 +77,21 @@ const VideoUploadPage = (props) => {
 							<Button
 								buttonText="upload"
 								addedButtonClass="Button__upload"
-								// onSubmit={handleVideoSubmit}
+								onSubmit={handleVideoSubmit}
 							/>
 							<Button
 								buttonText="cancel"
 								addedButtonClass="Button__cancel"
-								onSubmit={(e) => {
-									console.log("button clicked");
-									e.preventDefault();
+								onSubmit={handleVideoSubmit}
+								// onSubmit={(e) => {
+								// 	console.log("button clicked");
+								// 	e.preventDefault();
 
-									alert(
-										"your video upload is being cancelled, we're bringing you back home"
-									);
-									props.history.push("/");
-								}}
+								// 	alert(
+								// 		"your video upload is being cancelled, we're bringing you back home"
+								// 	);
+								// 	props.history.push("/");
+								// }}
 							/>
 						</div>
 					</form>
