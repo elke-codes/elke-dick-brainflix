@@ -23,7 +23,7 @@ router.use(express.json());
 
 router.get("/", (req, res) => {
 	const videosData = readData();
-	console.log("videosData", videosData);
+
 	newVideosData = videosData.map((videoDataShort) => {
 		// 	// Here we are using a rest parameter to remove some of the keys from the video object, which is common for GET all requests, to return limited data
 
@@ -106,9 +106,8 @@ router.post("/:videoID/comments", (req, res) => {
 
 router.delete("/:videoID/comments/:commentID", (req, res) => {
 	let videosData = readData();
-	console.log("from delete", videosData);
 
-	// TODOdive into comments and find the comment id
+	// find the current video and it s index
 	let currVidIndex;
 	let currVid = videosData.find((video, i) => {
 		if (video.id === req.params.videoID) {
@@ -117,17 +116,11 @@ router.delete("/:videoID/comments/:commentID", (req, res) => {
 		}
 	});
 
-	console.log("from delete currvid", currVid);
 	let comments = currVid.comments;
-	console.log("from delete comments", comments);
-	// let currComment = comments.find(
-	// 	(comment) => comment.id === req.params.commentID
-	// );
-
+	//find the current comment and filter it out
 	comments = comments.filter(
 		(comment) => comment.id !== req.params.commentID
 	);
-	console.log("comments after filter", comments);
 
 	//replace the current video comments array with the updated comments
 	currVid.comments = comments;
@@ -137,6 +130,24 @@ router.delete("/:videoID/comments/:commentID", (req, res) => {
 	writeFile(videosData);
 
 	res.status(204).send();
+});
+
+router.put("/:videoID/likes", (req, res) => {
+	videosData = readData();
+	let currVidIndex;
+	let currVid = videosData.find((video, i) => {
+		if (video.id === req.params.videoID) {
+			currVidIndex = i;
+			return true;
+		}
+	});
+
+	//++ syntax returns the value before  ++, so when you store it in a variable you'll get the old value! interesting...
+	currVid.likes++;
+
+	videosData[currVidIndex] = currVid;
+	writeFile(videosData);
+	res.status(200).send();
 });
 
 module.exports = router;
