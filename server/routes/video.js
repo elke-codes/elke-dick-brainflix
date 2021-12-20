@@ -20,12 +20,13 @@ const writeFile = (videosData) => {
 router.use(express.json());
 
 // get a list of videos: GET /video
+
 router.get("/", (req, res) => {
 	const videosData = readData();
 	console.log("videosData", videosData);
 	newVideosData = videosData.map((videoDataShort) => {
-		// 	// Here we are using a rest parameter to remove some of the keys from the game object, which is common for GET all requests, to return limited data
-		// videosDataShort = videosData.map((video) => {
+		// 	// Here we are using a rest parameter to remove some of the keys from the video object, which is common for GET all requests, to return limited data
+
 		let {
 			description,
 			views,
@@ -39,9 +40,6 @@ router.get("/", (req, res) => {
 		return videoInfo;
 	});
 
-	// });
-
-	// Only single response per request can be sent, it will throw an error otherwise
 	res.status(200).json(newVideosData);
 });
 
@@ -63,7 +61,6 @@ router.post("/", (req, res) => {
 	//get the most up to date data
 	const videosData = readData();
 
-	// We create IDs on a server, so it's not going to be a part of a request, rather we can use uuid or similar library to generate the new id
 	const newVideo = {
 		title: req.body.title,
 		channel: "AnonyMouse",
@@ -77,7 +74,7 @@ router.post("/", (req, res) => {
 		image: "http://localhost:8080/images/video-upload-image.jpg"
 	};
 
-	// // Update our gamesData array and then write the updates to a games data JSON file
+	// // Update our videosData array and then write the updates to a videos data JSON file
 	videosData.push(newVideo);
 	writeFile(videosData);
 
@@ -109,15 +106,19 @@ router.post("/:videoID/comments", (req, res) => {
 
 router.delete("/:videoID/comments/:commentID", (req, res) => {
 	let videosData = readData();
+	console.log("from delete", videosData);
 
 	// TODOdive into comments and find the comment id
 	const currVid = videosData.find((video) => video.id === req.params.videoID);
+	console.log("from delete currvid", currVid);
 	let comments = currVid.comments;
+	console.log("from delete comments", comments);
 	let currComment = comments.find(
 		(comment) => comment.id === req.params.commentID
 	);
 
 	comments = comments.filter((comment) => comment.id !== currComment.id);
+	console.log("comments after filter", comments);
 
 	// videosData = videosData.filter((video) => video.id !== currVid.id);
 
@@ -127,18 +128,3 @@ router.delete("/:videoID/comments/:commentID", (req, res) => {
 });
 
 module.exports = router;
-
-// It's a good idea to setup validation for your endpoints to make sure the data required is sent in a request
-// if (
-// 	!req.body.title ||
-// 	// !req.body.channel ||
-// 	// !req.body.image ||
-
-// 	!req.body.description
-// ) {
-// 	return res
-// 		.status(400)
-// 		.send(
-// 			"Please make sure to include title,  and description of the video"
-// 		);
-// }

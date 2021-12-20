@@ -23,8 +23,9 @@ function handleVideoSubmit(e) {
 		.then((response) => {
 			console.log("response post video", response);
 			e.target.reset();
-			alert("your video is being uploaded");
-			// props.history.push("/");
+			alert(
+				"your video is being uploaded, go check it out on the homepage!"
+			);
 		})
 		.catch((error) => console.log("error in post video", error));
 }
@@ -45,13 +46,6 @@ const VideoUploadPage = (props) => {
 						alt="topview of someone riding a blue bikes closeup"
 					/>
 					<form
-						// onSubmit={(e) => {
-						// 	e.preventDefault();
-						// 	alert(
-						// 		"your video is being uploaded, we're dropping you off at home"
-						// 	);
-						// 	props.history.push("/");
-						// }}
 						onSubmit={handleVideoSubmit}
 						className="upload__input">
 						<label

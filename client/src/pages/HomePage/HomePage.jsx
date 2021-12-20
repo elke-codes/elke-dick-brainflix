@@ -5,8 +5,6 @@ import Video from "../../components/Video/Video";
 
 import React, { Component } from "react";
 import axios from "axios";
-import { API_KEY } from "../../utils/externalInfo";
-import { API_URL } from "../../utils/externalInfo";
 
 class HomePage extends Component {
 	state = {
