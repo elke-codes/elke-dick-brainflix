@@ -37,7 +37,7 @@ class HomePage extends Component {
 				`http://localhost:8080/videos/${videoID}/comments`,
 				newComment
 			)
-			.then((resolve) => {
+			.then(() => {
 				this.getVideoDetails(videoID);
 			})
 			.catch((error) => console.log("post comment", error));
@@ -54,9 +54,18 @@ class HomePage extends Component {
 			.catch((error) => console.log("delete comment", error));
 	};
 
+	handleLike = (videoID) => {
+		axios
+			.put(`http://localhost:8080/videos/${videoID}/likes`)
+			.then((response) => {
+				console.log("handle like ", response);
+				this.getVideoDetails(videoID);
+			})
+			.catch((error) => console.log("put likes error", error));
+	};
+
 	//when the page first loads, get the video details from the api, then set the state of the selected video to be that video
 	componentDidMount() {
-		console.log("componentdidmount");
 		const currentVideoId = this.props.match.videoID;
 
 		// get the video data from the api
@@ -108,6 +117,7 @@ class HomePage extends Component {
 							<div className="main__container">
 								<Hero
 									selectedVideo={this.state.selectedVideo}
+									onLike={this.handleLike}
 								/>
 
 								<Comments
