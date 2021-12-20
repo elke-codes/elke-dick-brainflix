@@ -109,19 +109,31 @@ router.delete("/:videoID/comments/:commentID", (req, res) => {
 	console.log("from delete", videosData);
 
 	// TODOdive into comments and find the comment id
-	const currVid = videosData.find((video) => video.id === req.params.videoID);
+	let currVidIndex;
+	let currVid = videosData.find((video, i) => {
+		if (video.id === req.params.videoID) {
+			currVidIndex = i;
+			return true;
+		}
+	});
+
 	console.log("from delete currvid", currVid);
 	let comments = currVid.comments;
 	console.log("from delete comments", comments);
-	let currComment = comments.find(
-		(comment) => comment.id === req.params.commentID
-	);
+	// let currComment = comments.find(
+	// 	(comment) => comment.id === req.params.commentID
+	// );
 
-	comments = comments.filter((comment) => comment.id !== currComment.id);
+	comments = comments.filter(
+		(comment) => comment.id !== req.params.commentID
+	);
 	console.log("comments after filter", comments);
 
-	// videosData = videosData.filter((video) => video.id !== currVid.id);
+	//replace the current video comments array with the updated comments
+	currVid.comments = comments;
 
+	//replace teh current video with the updated comments
+	videosData[currVidIndex] = currVid;
 	writeFile(videosData);
 
 	res.status(204).send();

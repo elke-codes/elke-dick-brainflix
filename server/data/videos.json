@@ -27,12 +27,6 @@
         "comment": "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Every time I see him I feel instantly happy! He’s definitely my favorite ever!",
         "likes": 0,
         "timestamp": 1626011132000
-      },
-      {
-        "name": "dasdas",
-        "comment": "sdfsdfsdfsdf",
-        "timestamp": "2021-12-20T00:41:18.110Z",
-        "id": "ac204e51-76c5-4eeb-b684-b69296535d6f"
       }
     ],
     "id": "84e96018-4022-434e-80bf-000ce4cd12b8"
@@ -320,14 +314,7 @@
     "likes": 420,
     "video": "https://project-2-api.herokuapp.com/stream?api_key=elkedick",
     "timestamp": 1639963987030,
-    "comments": [
-      {
-        "name": "a",
-        "comment": "sdfsdfsdfsdf",
-        "timestamp": "2021-12-20T01:34:29.846Z",
-        "id": "e382de36-94ff-4989-b800-525e358159bc"
-      }
-    ],
+    "comments": [],
     "id": "52a70d8c-0ae6-45b5-9d25-24023c6aef93",
     "image": "http://localhost:8080/images/video-upload-image.jpg"
   }
