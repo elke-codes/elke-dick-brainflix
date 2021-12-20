@@ -21,7 +21,6 @@ function handleVideoSubmit(e) {
 	axios
 		.post(`http://localhost:8080/videos`, newVideo)
 		.then((response) => {
-			console.log("response post video", response);
 			e.target.reset();
 			alert(
 				"your video is being uploaded, go check it out on the homepage!"

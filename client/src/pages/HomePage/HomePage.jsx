@@ -27,7 +27,6 @@ class HomePage extends Component {
 	};
 	//post comment
 	handleComment = (name, comment, videoID) => {
-		console.log("handlecomment");
 		const newComment = {
 			name,
 			comment
@@ -53,12 +52,11 @@ class HomePage extends Component {
 			})
 			.catch((error) => console.log("delete comment", error));
 	};
-
+	//add a like to a video
 	handleLike = (videoID) => {
 		axios
 			.put(`http://localhost:8080/videos/${videoID}/likes`)
-			.then((response) => {
-				console.log("handle like ", response);
+			.then(() => {
 				this.getVideoDetails(videoID);
 			})
 			.catch((error) => console.log("put likes error", error));
@@ -72,7 +70,6 @@ class HomePage extends Component {
 		axios
 			.get(`http://localhost:8080/videos`)
 			.then((result) => {
-				console.log("componentdidmount get videos", result);
 				const videosData = result.data;
 				//populate our videoData array with info from the api
 				this.setState({
