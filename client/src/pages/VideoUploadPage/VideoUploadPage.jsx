@@ -3,7 +3,7 @@ import Button from "../../components/Button/Button";
 import DividerLine from "../../components/DividerLine/DividerLine";
 
 import "./VideoUploadPage.scss";
-import thumbnail from "../../assets/images/Upload-video-preview.jpg";
+
 import axios from "axios";
 
 function handleCancel(e) {
@@ -39,7 +39,9 @@ const VideoUploadPage = (props) => {
 				<div className="upload__wrapper">
 					<img
 						className="upload__image"
-						src={thumbnail}
+						src={
+							"http://localhost:8080//images/Upload-video-preview.jpg"
+						}
 						alt="topview of someone riding a blue bikes closeup"
 					/>
 					<form

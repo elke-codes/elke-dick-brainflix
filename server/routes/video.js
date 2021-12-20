@@ -74,7 +74,7 @@ router.post("/", (req, res) => {
 		timestamp: Date.now(),
 		comments: [],
 		id: uuid(),
-		image: "http://localhost:8080/images/image.jpg"
+		image: "http://localhost:8080/images/video-upload-image.jpg"
 	};
 
 	// // Update our gamesData array and then write the updates to a games data JSON file
